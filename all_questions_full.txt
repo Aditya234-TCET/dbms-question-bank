@@ -1,0 +1,979 @@
+
+
+==================== CO1 ====================
+[2M | Remember | 1 (Easy)] What is DBMS?
+[2M | Understand | 1 (Easy)] What is the role of Storage Management?
+[2M | Remember | 1 (Easy)] What is a Database?
+[2M | Understand | 1 (Easy)] What is a Query processor?
+[2M | Understand | 1 (Easy)] What is schema?
+[2M | Understand | 2 (Average)] Differentiate between instance and schema.
+[2M | Remember | 1 (Easy)] Mention the components in a relational Data Model.
+[2M | Analyze | 1 (Easy)] How does a database differ from a spreadsheet?
+[2M | Understand | 1 (Easy)] What are the characteristics of a database?
+[2M | Apply | 2 (Average)] How do the characteristics of databases ensure data integrity?
+[2M | Remember | 1 (Easy)] Who are the primary users of a database system?
+[2M | Analyze | 2 (Average)] How do database users differ in their roles and permissions?
+[2M | Analyze | 2 (Average)] What is the role of a Database Administrator (DBA)?
+[2M | Understand | 2] How does a DBA ensure the smooth operation of a database system?
+[2M | Remember | 1] What are the different types of data models in DBMS?
+[2M | Understand | 2] How do relational and hierarchical data models differ?
+[2M | Understand | 2] How does the concept of a database relate to data management in organizations?
+[2M | Understand | 3] How do the characteristics of a database relate to its efficiency and reliability?
+[2M | Analyze | 3] What assumptions are we making about the necessity of databases in modern organizations?
+[2M | Analyze | 3] What assumptions are we making about data models being universally applicable across domains?
+[2M | Understand | 2] Give an example to support the need for a Database Administrator (DBA)?
+[2M | Understand | 1] Give an example of a real-world application of the relational data model?
+[2M | Understand | 2] How does implementing a DBMS system affect the efficiency of data retrieval compared to a file system?
+[5M | Understand | 2 (Average)] State the applications of DBMS.
+[5M | Understand | 2 (Average)] What are the functions of Transaction Management module?
+[5M | Understand | 2 (Average)] Differentiate between data, information and knowledge.
+[5M | Understand | 1 (Easy)] What do you mean by Data Redundancy? Give an example.
+[5M | Understand | 1 (Easy)] What do you mean by Data Inconsistency? Give an example.
+[5M | Understand | 2 (Average)] What do you mean by Data Integrity? Give an example.
+[5M | Analyze | 2 (Average)] Differentiate between SQL and NoSQL.
+[5M | Understand | 1 (Easy)] How would you describe the role of databases in modern applications?
+[5M | Apply | 2 (Average)] What are the core components of a database, and how do they interact?
+[5M | Analyze | 2 (Average)] Why is a structured database more effective than an unstructured storage system?
+[5M | Analyze | 2 (Average)] How would you identify database characteristics in a real-world application?
+[5M | Analyze | 2 (Average)] What are the implications of missing any key characteristic of a database system?
+[5M | Evaluate | 3 (Difficult)] Which characteristic of a database is most critical for enterprise systems? Why?
+[5M | Analyze | 2 (Average)] What is the difference between a file system and a database system?
+[5M | Analyze | 2 (Average)] How does a database system overcome the limitations of a file system?
+[5M | Evaluate | 3 (Difficult)] How would you choose between a file system and a database system for an application?
+[5M | Analyze | 2 (Average)] What are the key differences between file systems and database systems in terms of scalability?
+[5M | Evaluate | 3 (Difficult)] Which system—file system or database system—offers better data security? Justify your answer.
+[5M | Apply | 2 (Average)] How would you allocate user roles in a database system for an organization?
+[5M | Analyze | 2 (Average)] What are the potential conflicts between different users of a database system?
+[5M | Evaluate | 3 (Difficult)] Which type of database user requires the most robust security measures? Why?
+[5M | Understand | 1 (Easy)] What is the architecture of a DBMS?
+[5M | Analyze | 2 (Average)] How does the architecture of a DBMS support its functionality?
+[5M | Apply | 2 (Average)] How would you illustrate the three-tier architecture of a DBMS?
+[5M | Analyze | 2 (Average)] What are the components of a DBMS architecture, and how do they interact?
+[5M | Evaluate | 3 (Difficult)] Which DBMS architecture—single-tier, two-tier, or three-tier—is most effective for scalability? Why?
+[5M | Analyze | 3] What are the challenges a DBA faces in managing large-scale databases?
+[5M | Evaluate | 2] Which skill set is most crucial for a DBA? Justify your answer.
+[5M | Apply | 3] How would you choose an appropriate data model for a specific application?
+[5M | Understand | 3] What are the advantages and disadvantages of each data model?
+[5M | Evaluate | 3] Which data model is best suited for modern web applications? Why?
+[5M | Analyze | 3] What else could we assume about the future evolution of database management systems?
+[5M | Evaluate | 2] What evidence supports the claim that DBAs are crucial for database security and maintenance?
+[5M | Evaluate | 3] What evidence supports the preference for object-oriented data models in modern applications?
+[5M | Analyze | 3] What do you think causes the continued relevance of hierarchical models in certain domains?
+[5M | Analyze | 2] Why is a DBMS considered more efficient for handling large data sets compared to traditional methods?
+[5M | Evaluate | 2] How do you know that implementing a DBMS improves data retrieval speed?
+[5M | Evaluate | 2] What evidence supports the reasoning that DBMS reduces data redundancy?
+[5M | Analyze | 3] How does the hierarchical data model compare with the relational data model in terms of usability?
+[5M | Evaluate | 3] Why is the relational data model considered better than the network data model for modern systems?
+[5M | Analyze | 3] How does the role of a DBA in a centralized DBMS differ from that in a distributed DBMS?
+[5M | Evaluate | 3] Justify that hierarchical models are still relevant despite the dominance of relational models?
+[5M | Evaluate | 3] Justify that one may prefer a network data model over an object-oriented data model in specific cases?
+[5M | Analyze | 2] What are the implications of using a relational data model in DBMS design?
+[5M | Analyze | 3] What are the implications of using a centralized DBMS architecture for data security?
+[5M | Analyze | 3] How does implementing a distributed DBMS system affect data consistency?
+[5M | Analyze | 3] How does the choice of a data model affect the scalability of the database system?
+[5M | Understand | 3] How does the structure of a database (e.g., hierarchical vs. relational) influence its flexibility in handling data updates?
+[5M | Understand | 3] What are the real-world applications of data models in the healthcare industry for managing patient information?
+[5M | Apply | 3] How can the concept of relational database systems be used to optimize search queries in an online retail platform?
+[10M | Analyze | 2 (Average)] What are the differences between DBMS and conventional flat file system?
+[10M | Analyze | 3 (Difficult)] Explain the architecture of DBMS with diagram.
+[10M | Understand | 2 (Average)] Differentiate between 2-Tier and 3 Tier Architecture of DBMS.
+[10M | Understand | 3 (Difficult)] Write a note on the different Data models with appropriate Diagrams.
+[10M | Understand | 1 (Easy)] Explain the role of a DBA.
+[10M | Understand | 1 (Easy)] Explain the different types of Database users with examples.
+[10M | Analyze | 2 (Average)] Explain the different levels of abstraction in a database.
+[10M | Create | 3 (Difficult)] Can you design a basic scenario where a database improves efficiency?
+[10M | Create | 3 (Difficult)] Can you design a database user structure for a small business?
+[10M | Create | 3 (Difficult)] Can you design a DBMS architecture for a cloud-based application?
+[10M | Apply | 3] Can you outline a day-to-day task plan for a DBA in a multinational corporation?
+[10M | Evaluate | 3] What would happen if we changed the assumption that databases must be centralized?
+[10M | Evaluate | 3] What are the implications of data models for ensuring data consistency and integrity?
+[10M | Evaluate | 3] How can we measure the impact of introducing a new data model (e.g., NoSQL) on an existing relational database system?
+[10M | Understand | 3] What theoretical limitations exist in applying NoSQL databases to complex, relational data structures?
+[10M | Evaluate | 3] What might be the consequences of assuming that a single database model is sufficient for all applications?
+
+
+==================== CO2 ====================
+[2M | Remember | 1] What is ER Model?
+[2M | Remember | 1] What are tuples and attributes in relational database?
+[2M | Understand | 1] Give any two benefits of a data model.
+[2M | Remember | 1] What is a derived attribute?
+[2M | Remember | 1] What is a Foreign Key?
+[2M | Remember | 1] What is a primary key?
+[2M | Understand | 1] What is a Candidate key?
+[2M | Remember | 1 (Easy)] Define an entity. What are its types?
+[2M | Remember | 1 (Easy)] What is an attribute? List its types.
+[2M | Remember | 1 (Easy)] What are the key components of an ER diagram?
+[2M | Understand | 1 (Easy)] What is the rationale behind using primary keys to identify records uniquely in a relational model?
+[2M | Remember | 1 (Easy)] What is the primary purpose of an ER diagram?a) Data Storage b) Data Representation c) Network Modeling d) Program Execution
+[2M | Understand | 1 (Easy)] Which of the following is NOT a type of key in the relational model? a) Primary Key b) Composite Key c) Algorithmic Key d) Candidate Key
+[2M | Apply | 2 (Average)] Generalization in the Extended ER model is used for: a) Combining lower-level entities into higher-level entities b) Breaking attributes into entities c) Ensuring referential integrity d) Identifying duplicate records
+[2M | Remember | 1 (Easy)] Which of the following is NOT a component of an ER diagram? a) Entities b) Relationships c) Attributes d) Pointers
+[2M | Understand | 1 (Easy)] A candidate key is defined as: a) A key chosen as the primary key b) A minimal superkey c) A key used for indexing d) A foreign key in another table
+[2M | Analyze | 2 (Average)] What does Codd’s Rule 5 emphasize in relational databases? a) Physical data independence b) Logical data independence c) Comprehensive data retrieval d) Uniform data integrity
+[2M | Understand | 1 (Easy)] Aggregation in ER diagrams is represented by: a) Dashed lines b) Rectangles within rectangles c) Ellipses with arrows d) Relationships involving relationships
+[2M | Understand | 2 (Average)] In the relational model, the term “domain” refers to: a) A set of valid values for an attribute b) A collection of tables c) A subset of records in a table d) A group of related attributes
+[2M | Apply | 2 (Average)] What is the purpose of mapping ER diagrams to relational models? a) To improve database performance b) To create physical storage structures c) To convert conceptual designs to logical schemas d) To ensure data security
+[2M | Analyze | 3 (Difficult)] Which relationship type in an ER diagram would likely use a foreign key for its implementation? a) One-to-One b) Many-to-Many c) One-to-Many d) Recursive
+[5M | Understand | 2] Explain DDL and DML commands with examples.
+[5M | Understand | 2] Explain different types of keys.
+[5M | Understand | 3] Explain Specialization and Generalization with suitable example
+[5M | Understand | 2] What do you understand by cardinality? What are its different types?
+[5M | Understand | 2] Justify: All candidate keys are super keys, but all super keys are not candidate keys.
+[5M | Understand | 2] Explain the following terms with an example:-
+a. Composite Attribute
+b.  Weak Entity.
+[5M | Understand | 3] Define the concept of aggregation. Give two examples of where this concept is useful.
+[5M | Understand | 2 (Average)] Explain the difference between strong and weak entities with examples.
+[5M | Understand | 2 (Average)] What are the different types of relationships in the ER model? Illustrate with examples.
+[5M | Remember | 1 (Easy)] List and explain the types of keys in a relational model.
+[5M | Understand | 2 (Average)] Discuss Codd’s rules for relational databases.
+[5M | Analyze | 3 (Difficult)] Explain aggregation in EER diagrams and its use in complex databases.
+[5M | Analyze | 2 (Average)] Differentiate between composite key and super key with examples.
+[5M | Analyze | 2 (Average)] Why is it necessary to have different types of attributes in an ER model? Discuss its assumptions.
+[5M | Evaluate | 2 (Average)] Are all relationships in an ER model equally important? Justify your answer with examples.
+[5M | Analyze | 3 (Difficult)] What assumptions are made about data redundancy when creating keys in relational models? Discuss.
+[5M | Evaluate | 3 (Difficult)] Is the concept of aggregation always necessary in EER diagrams? Justify your reasoning.
+[5M | Analyze | 2 (Average)] Are composite keys always the best choice for identifying data uniquely? Discuss with examples.
+[5M | Analyze | 2 (Average)] How would the absence of foreign keys impact relational database design? Discuss assumptions made.
+[5M | Analyze | 2 (Average)] If an attribute is always NULL, should it be included in the ER model? Challenge this assumption.
+[5M | Analyze | 2 (Average)] How does the assumption of data integrity influence the selection of keys in a relational model?
+[5M | Analyze | 2 (Average)] Why is it essential to define attributes with specific types in an ER model? Provide supporting evidence.
+[5M | Apply | 2 (Average)] Explain why generalization and specialization are needed in the EER model with real-life examples.
+[5M | Evaluate | 2 (Average)] Justify the use of composite keys instead of single attributes as keys in certain database designs.
+[5M | Understand | 2 (Average)] Why is it necessary to convert an ER model into a relational model? Provide reasons and examples.
+[5M | Analyze | 2 (Average)] Provide reasons why aggregation is an important concept in EER diagrams. Illustrate with examples.
+[5M | Apply | 2 (Average)] What is the reasoning behind defining different types of relationships (1:1, 1:N, N:M) in the ER model?
+[5M | Analyze | 2 (Average)] Justify the importance of maintaining minimal redundancy while designing a relational database.
+[5M | Evaluate | 2 (Average)] Provide evidence supporting the claim that well-designed keys improve query performance in relational databases.
+[5M | Understand | 1 (Easy)] What are the justifications for enforcing integrity constraints in a relational database?
+[5M | Analyze | 2 (Average)] Compare and contrast strong and weak entities in the ER model. Under what circumstances is each type more appropriate?
+[5M | Evaluate | 2 (Average)] Discuss the advantages and disadvantages of using composite attributes versus multivalued attributes in an ER diagram.
+[5M | Analyze | 2 (Average)] Examine the differences in viewpoint between a database administrator and a system designer when defining keys in the relational model.
+[5M | Apply | 2 (Average)] Why might a database designer prefer using specialization over generalization in an EER diagram? Discuss the perspective of system scalability.
+[5M | Apply | 2 (Average)] From a user perspective, why is it essential to map EER diagrams effectively to the relational model? Provide an example to support your argument.
+[5M | Analyze | 2 (Average)] In the context of the relational model, compare the perspectives on referential integrity between a small startup and a large enterprise organization.
+[5M | Apply | 2 (Average)] How might the perspective of a developer using the database differ from that of a database administrator regarding entity-relationship mapping?
+[5M | Understand | 1 (Easy)] From an academic viewpoint, why are aggregation and generalization important concepts? How might their relevance vary in industry applications?
+[5M | Analyze | 2 (Average)] Examine the differing viewpoints on the need for a detailed ER diagram between a project manager and a system developer.
+[5M | Analyze | 2 (Average)] What could be the consequences of incorrectly identifying the relationship types (1:1, 1:N, M:N) in an ER diagram for a business application?
+[5M | Evaluate | 3 (Difficult)] If an ER diagram is overly complex, how might it impact the development and maintenance of a database? Discuss the long-term implications.
+[5M | Analyze | 2 (Average)] Analyze the impact of generalization versus specialization decisions on the extensibility of a database system.
+[5M | Apply | 2 (Average)] What are the consequences of not incorporating aggregation in a database design when dealing with complex relationships?
+[5M | Analyze | 2 (Average)] Discuss the impact of misinterpreting weak entities in the ER model on real-world applications such as banking systems.
+[5M | Apply | 2 (Average)] What could be the long-term effects of not defining primary and foreign keys correctly in the relational model?
+[5M | Understand | 1 (Easy)] What might be the consequences of defining unnecessary attributes for entities in the ER model? Consider storage and query efficiency.
+[5M | Analyze | 2 (Average)] How might a poorly designed ER diagram influence the development time and cost of a database system for a small-scale enterprise?
+[5M | Analyze | 2 (Average)] Analyze how the choice of entity types and their attributes in an ER model can influence the performance of a database system. Reflect on potential pitfalls.
+[5M | Analyze | 2 (Average)] Analyze the implications of overcomplicating an ER diagram with unnecessary relationships and attributes. Reflect on its effect on development time and system clarity.
+[5M | Evaluate | 2 (Average)] Reflect on the ethical considerations of database design when modeling sensitive data like healthcare or financial records in an ER model.
+[5M | Analyze | 2 (Average)] Discuss how poor understanding of weak entity sets could lead to critical errors in the design of an ER model. Reflect on ways to avoid such errors.
+[5M | Analyze | 2 (Average)] Reflect on how an overly simplistic ER diagram might fail to capture the complexities of real-world business processes. Discuss the implications.
+[5M | Evaluate | 2 (Average)] Reflect on the role of aggregation in representing complex interactions in a multi-organization database system. What could happen if it’s overlooked?
+[5M | Understand | 2 (Average)] Explain the differences between strong and weak entities in an ER model. Provide suitable examples for each.
+[5M | Remember | 1 (Easy)] Define attributes and describe the different types of attributes in an ER model. How do they affect database design?
+[5M | Understand | 2 (Average)] What are relationship types in an ER model? Explain the concepts of one-to-one, one-to-many, and many-to-many relationships with examples.
+[5M | Understand | 1 (Easy)] Explain the structure of a relational database. How do the concepts of tables, rows, and columns relate to the ER model?
+[5M | Analyze | 2 (Average)] Compare and contrast composite attributes and multivalued attributes in an ER model. How are they represented in a relational database?
+[5M | Understand | 2 (Average)] What are the implications of failing to enforce referential integrity in a relational database? Provide examples to support your answer.
+[5M | Understand | 2 (Average)] Describe the concept of aggregation in an Extended ER model. How does it differ from a regular relationship, and why is it used?
+[5M | Understand | 2 (Average)] Explain the importance of identifying entity sets and their types during the ER modeling phase. How does this step impact database design?
+[5M | Understand | 2 (Average)] Define the concept of derived attributes in an ER model. How are derived attributes handled in the relational model?
+[5M | Analyze | 2 (Average)] Reflect on a real-life scenario where you interacted with a database-driven application. How do you think the underlying ER model was designed?
+[5M | Evaluate | 2 (Average)] Consider a situation where incorrect relationships between entities could lead to real-world issues. Share an example and discuss possible solutions.
+[5M | Understand | 1 (Easy)] Reflect on a database application you find particularly user-friendly. How might its ER or relational model contribute to its ease of use?
+[5M | Apply | 2 (Average)] Think about a situation where generalization and specialization could simplify managing complex data. Share an example from your own experience.
+[5M | Understand | 1 (Easy)] Think about how the relational model enforces integrity through keys. Can you recall an instance where this principle improved data accuracy?
+[5M | Analyze | 2 (Average)] Reflect on how the principles of database design could be applied to non-database systems, such as organizing files on your computer.
+[5M | Apply | 2 (Average)] Consider the concept of aggregation in the Extended ER model. How might this be useful in structuring data for a collaborative project you’ve worked on?
+[5M | Understand | 1 (Easy)] How would understanding the structure of a relational database help you make better use of tools like Excel or Google Sheets?
+[5M | Analyze | 2 (Average)] Reflect on the use of relationships in organizing data. How do personal or professional relationships in your life mirror these database concepts?
+[10M | Analyze | 3] Consider the following relational database:                                             Employee (employee-name, street, city)                                                Works (employee-name, company-name, salary)                                  Company (company-name, city)                                                        Manages (employee-name, manager-name)                                            Draw the ER diagram.
+[10M | Analyze | 3] Consider an Airline Reservation System
+a. Draw E-R diagram. Assume suitable data
+b. Convert the E-R diagram into Relational Model
+[10M | Analyze | 3] Draw the ER diagram of Online Railway Ticket reservation system.
+[10M | Analyze | 3] Emerging Electric wishes to create a database with the following entities and attributes: 
+a) Customer, with attributes Customer ID, Name, Address (Street, City, State, Zip Code), and Telephone 
+b) Location, with attributes Location ID, Address (Street, City, State, Zip Code), and Type (values of Business or Residential) 
+c) Rate, with attributes Rate Class and Rate Per KWH 
+After interviews with the owners, you have come up with the following business rules: i) Customers can have one or more locations. ii) Each location can have one or more rates, depending on the time of day. 
+
+Draw an ERD for this situation and place minimum and maximum cardinalities on the diagram. State any assumptions that you have made
+[10M | Analyze | 3] Suppose you are given the following requirements for a simple database of the National Cricket Trophy (NCT): 
+
+• the NCT has many teams, • each team has a name, a city, a coach, a captain, and a set of players, • each player belongs to only one team, • each player has a name, a position (such as left wing or goalie), a skill level, • and a set of injury records, • a team captain is also a player, • a game is played between two teams (referred to as host team and guest team) and has a date (such as May 11th, 1999) and a score. 
+
+Construct ER diagram for the NCT database.
+[10M | Understand | 2] Explain how an ER diagram can be converted to relations.
+[10M | Analyze | 3] Draw EER diagram for Hospital Management System showing constraints on generalization and specialization.
+[10M | Apply | 2 (Average)] Draw an ER diagram for a library management system.
+[10M | Analyze | 3 (Difficult)] Explain the concept of generalization and specialization in an EER diagram with examples.
+[10M | Apply | 3 (Difficult)] Map the given ER diagram into a relational database. Provide step-by-step details.
+[10M | Evaluate | 3 (Difficult)] Using a case study of an online shopping database, explain the role of primary and foreign keys.
+[10M | Apply | 3 (Difficult)] Describe how specialization and generalization are mapped to a relational database.
+[10M | Create | 3 (Difficult)] Design an ER diagram for a hospital management system and convert it into a relational model.
+[10M | Evaluate | 3 (Difficult)] Discuss why mapping ER diagrams to relational models sometimes leads to loss of information.
+[10M | Create | 3 (Difficult)] What challenges arise when trying to generalize or specialize entities in a real-life scenario?
+[10M | Analyze | 3 (Difficult)] Can every ER model be directly translated into a relational model? Identify scenarios where this fails.
+[10M | Evaluate | 3 (Difficult)] Evaluate the relevance of Codd’s rules in modern database systems. Are all the rules still valid?
+[10M | Evaluate | 3 (Difficult)] Is normalization a universal solution for relational database design? Discuss scenarios where it may fail.
+[10M | Evaluate | 3 (Difficult)] Critique the use of EER models in systems that require high scalability. Are there better alternatives?
+[10M | Evaluate | 3 (Difficult)] Do all entities in a real-life problem need to be modeled? Discuss scenarios where this may not be true.
+[10M | Analyze | 3 (Difficult)] Why is normalization a recommended step in relational database design? Provide examples to support your answer.
+[10M | Evaluate | 3 (Difficult)] Discuss the evidence that supports the importance of Codd’s rules in ensuring database consistency.
+[10M | Evaluate | 3 (Difficult)] Evaluate the use of foreign keys as a tool for maintaining referential integrity. Is there any alternative?
+[10M | Analyze | 3 (Difficult)] Why is mapping specialization and generalization from EER to relational models not always straightforward?
+[10M | Evaluate | 3 (Difficult)] Critically examine why some real-world scenarios might challenge the assumptions of the relational model.
+[10M | Analyze | 3 (Difficult)] How does the relational model address data redundancy compared to the ER model? Examine both perspectives.
+[10M | Analyze | 3 (Difficult)] Analyze the potential challenges in designing an ER diagram for a dynamic real-world application like an e-commerce platform.
+[10M | Evaluate | 3 (Difficult)] Evaluate the trade-offs between using 1:N and M:N relationships in an ER model. How does each impact database performance and complexity?
+[10M | Evaluate | 3 (Difficult)] Discuss the opposing viewpoints on the necessity of following all of Codd’s rules in modern relational database systems.
+[10M | Evaluate | 3 (Difficult)] Consider two different perspectives: a data analyst and a database architect. How might their views on normalization differ, and why?
+[10M | Evaluate | 3 (Difficult)] Evaluate the benefits and drawbacks of automating ER to relational model conversion versus manual mapping. Consider industry and academic perspectives.
+[10M | Evaluate | 3 (Difficult)] How might the decision to use composite keys instead of surrogate keys affect database performance and scalability?
+[10M | Apply | 2 (Average)] What implications would arise from failing to normalize a database derived from an ER model? Discuss how it would affect data consistency and redundancy.
+[10M | Evaluate | 3 (Difficult)] How does choosing not to follow Codd’s rules in the relational model design affect data integrity? Discuss potential real-world scenarios.
+[10M | Analyze | 3 (Difficult)] Discuss the implications of incorrect mapping from EER to the relational model. What challenges might arise during query execution?
+[10M | Analyze | 3 (Difficult)] What could happen if an organization ignores referential integrity while implementing relationships in the relational model?
+[10M | Evaluate | 3 (Difficult)] If an EER model lacks proper generalization and aggregation, what impact might this have on representing complex organizational hierarchies?
+[10M | Evaluate | 3 (Difficult)] Consider the decision to eliminate M:N relationships by introducing intermediate tables. What are the potential implications for query complexity?
+[10M | Analyze | 3 (Difficult)] Reflect on the advantages and challenges of using an ER model to represent a hospital's database system. What trade-offs must be considered in terms of scalability?
+[10M | Evaluate | 3 (Difficult)] Consider the role of Codd’s rules in ensuring relational database quality. Reflect on how ignoring these rules might affect long-term data integrity and usability.
+[10M | Analyze | 3 (Difficult)] Reflect on a situation where incorrect mapping of EER concepts like generalization or aggregation to the relational model caused design issues. Propose improvements.
+[10M | Evaluate | 3 (Difficult)] Discuss how the relationships in an ER model could be optimized to handle future growth of a large-scale e-commerce platform. Reflect on scalability and complexity.
+[10M | Analyze | 3 (Difficult)] Consider a real-world scenario where normalization (up to 3NF) was not applied during database design. Reflect on the consequences of this decision in the long term.
+[10M | Evaluate | 3 (Difficult)] Reflect on how decisions regarding the use of surrogate keys over composite keys might influence data retrieval efficiency in a relational database.
+[10M | Evaluate | 3 (Difficult)] Reflect on a scenario where database designers failed to account for many-to-many (M:N) relationships. How might this omission impact system functionality?
+[10M | Analyze | 3 (Difficult)] Analyze how the omission of referential integrity constraints could compromise the validity of relationships in a relational database system. Reflect on mitigation steps.
+[10M | Analyze | 3 (Difficult)] Reflect on the challenges of implementing specialization and generalization in a dynamic database environment, such as one for ride-sharing services.
+[10M | Apply | 3 (Difficult)] Discuss the significance of primary, candidate, and foreign keys in the relational model. How do these keys enforce data integrity?
+[10M | Understand | 3 (Difficult)] Illustrate the concept of specialization and generalization in the Extended ER model. How can they be mapped to a relational database?
+[10M | Apply | 2 (Average)] Describe the process of mapping an ER diagram to a relational model. Highlight the steps with a real-world example.
+[10M | Understand | 3 (Difficult)] Discuss Codd’s 12 rules for relational databases. Which of these rules are most critical for ensuring data integrity?
+[10M | Apply | 3 (Difficult)] How do generalization and specialization contribute to hierarchical modeling in databases? Provide an example where both are used effectively.
+[10M | Understand | 3 (Difficult)] What is the significance of mapping cardinality constraints in an ER diagram? How are these constraints translated in the relational model?
+[10M | Create | 3 (Difficult)] Think about the data you manage daily (e.g., contacts, tasks, or expenses). How would you design an ER diagram to organize this data efficiently?
+[10M | Evaluate | 3 (Difficult)] How would the absence of primary and foreign keys in a database impact its reliability and usability? Relate this to a personal or observed example.
+[10M | Create | 3 (Difficult)] If you were tasked with designing a database for your favorite hobby or activity, what challenges would you face in creating an ER diagram?
+[10M | Analyze | 3 (Difficult)] Reflect on the concept of normalization in relational databases. How might improper normalization have caused issues in systems you've encountered?
+[10M | Evaluate | 3 (Difficult)] Imagine designing a relational database for a community project. What factors would you consider to ensure inclusivity and accessibility?
+[10M | Create | 3 (Difficult)] If you were to explain the significance of the relational model to someone outside the technical field, what real-world analogy would you use?
+
+
+==================== CO3 ====================
+[2M | Apply | 1] Write the syntax of SQL Rename operation.
+[2M | Understand | 2] What is a tuple variable and write the syntax of its usage.
+[2M | Analyze | 2] Can we drop a primary key constraint? If so, what is the syntax of that query?
+[2M | Apply | 1] Give the different syntaxes of SELECT query.
+[2M | Apply | 1] In which type of Query is the WHERE clause used?
+[2M | Apply | 2] How do you order tuples in alphabetical order?
+[2M | Apply | 2] Write the SQL query to find average salary of all emplyees working in an organisation.
+[2M | Remember | 1 (Easy)] What does SQL stand for?
+[2M | Remember | 1 (Easy)] Which SQL command is used to retrieve data from a database?
+[2M | Understand | 1 (Easy)] What is the primary purpose of the CREATE TABLE SQL statement?
+[2M | Understand | 1 (Easy)] In SQL, which of the following is used to ensure the accuracy and reliability of data in a database? a) Integrity Constraints b) Data Definition Language c) Transaction Control Language d) Foreign Key Constraints
+[2M | Understand | 1 (Easy)] What does the INSERT INTO SQL command do?
+[2M | Remember | 1 (Easy)] Which of the following is a valid SQL Data Type for storing text? a) INT b) TEXT c) DATE d) FLOAT
+[2M | Understand | 1 (Easy)] Which SQL statement is used to remove rows from a table?
+[2M | Understand | 1 (Easy)] In SQL, which clause is used to filter the results of a query after the data is grouped? a) WHERE b) GROUP BY c) HAVING d) ORDER BY
+[2M | Apply | 2 (Average)] What is the purpose of GROUP BY clause in SQL?
+[2M | Understand | 1 (Easy)] What is the function of UPDATE SQL command in SQL?
+[5M | Apply | 2] Write a note on SQL String Matching operations
+[5M | Understand | 2] How is the ordering of tuples carried out in a SQL query? Give its syntax.
+[5M | Apply | 2] Explain aggregate functions and set operations in SQL with examples.
+[5M | Understand | 2] How is the concatenation of two strings carried out in SQL?
+[5M | Understand | 2] What is the process of inserting multiple records into a relation in SQL?
+[5M | Understand | 2] Write a note on group by and having clause in SQL.
+[5M | Analyze | 2 (Average)] Explain the difference between HAVING and WHERE clause in SQL.
+[5M | Apply | 2 (Average)] Write an SQL query to retrieve the names of employees whose salary is above 50000 from the employees table.
+[5M | Understand | 2 (Average)] What is the purpose of FOREIGN KEY in SQL?
+[5M | Apply | 2 (Average)] Write an SQL query to count the total number of rows in a students table.
+[5M | Understand | 2 (Average)] How would you define a PRIMARY KEY in SQL? What is its role in relational database management?
+[5M | Analyze | 2 (Average)] What does TRUNCATE do in SQL, and how is it different from DELETE?
+[5M | Apply | 2 (Average)] Write an SQL query to display the average salary of employees working in each department.
+[5M | Analyze | 3 (Difficult)] What is the difference between INNER JOIN and OUTER JOIN in SQL?
+[5M | Analyze | 2 (Average)] SQL is considered a declarative language, meaning that you only specify the desired result, not how to achieve it. What assumptions underlie this declarative nature?
+[5M | Evaluate | 2 (Average)] Why is the GROUP BY clause often misunderstood in SQL, particularly when applied with HAVING? What assumptions are involved in grouping data for aggregation?
+[5M | Evaluate | 3 (Difficult)] Do you believe that SQL's use of NULL values is problematic for database design and querying? Why or why not? Challenge the common belief about handling NULL values.
+[5M | Evaluate | 2 (Average)] Consider the role of PRIMARY KEY in relational databases. Do you think it’s always essential for every table to have a primary key? Why or why not?
+[5M | Evaluate | 3 (Difficult)] FOREIGN KEY constraints are commonly enforced in relational databases. What could be the consequences of loosening or removing FOREIGN KEY constraints in SQL?
+[5M | Evaluate | 2 (Average)] Is it true that all SQL commands are case-insensitive? If not, explain the assumptions regarding case sensitivity in SQL and how it might affect queries.
+[5M | Create | 2 (Average)] In SQL, is it always necessary to use JOIN operations for combining tables, or are there alternative ways to retrieve and associate data from different tables?
+[5M | Understand | 2 (Average)] Why is the Data Definition Language (DDL) used to define the structure of a database, and what role does it play in ensuring database integrity? Provide evidence from database design principles.
+[5M | Understand | 2 (Average)] What is the rationale behind using Data Manipulation Language (DML) commands like INSERT, UPDATE, and DELETE? How do these commands contribute to the overall database functionality?
+[5M | Analyze | 2 (Average)] Why is it important to distinguish between Data Control Language (DCL) and Transaction Control Language (TCL)? What purpose do they serve in maintaining security and database consistency?
+[5M | Analyze | 2 (Average)] SQL is considered a declarative language, where you describe what to do, not how to do it. Why is this distinction important for database querying and optimization?
+[5M | Understand | 2 (Average)] Why do constraints like NOT NULL, CHECK, and DEFAULT play an essential role in ensuring data integrity in a relational database? Provide examples to support your explanation.
+[5M | Apply | 2 (Average)] What are the reasons behind using aggregate functions like COUNT, SUM, and AVG in SQL? How do these functions support data analysis and decision-making in business applications?
+[5M | Understand | 2 (Average)] Explain why the GROUP BY clause is required in conjunction with aggregate functions. What does it accomplish in SQL queries? What evidence supports its use for grouping data efficiently?
+[5M | Analyze | 2 (Average)] What are the reasons behind using HAVING in SQL queries instead of WHERE when filtering aggregated results? Explain why both clauses serve different purposes in data queries.
+[5M | Apply | 1 (Easy)] Write an SQL query to create a table Student with the following attributes: Student_ID (Primary Key), First_Name, Last_Name, DOB, Enrollment_Date.
+[5M | Apply | 1 (Easy)] Given the table Employees (Emp_ID, Emp_Name, Emp_Salary, Dept_ID), write an SQL query to retrieve the names and salaries of employees whose salary is greater than 50000.
+[5M | Apply | 2 (Average)] Write an SQL query to add a column Email (VARCHAR) to the existing Students table.
+[5M | Apply | 2 (Average)] Given a table Orders (Order_ID, Product_Name, Order_Date, Quantity), write an SQL query to find the total quantity of each product ordered. Use GROUP BY.
+[5M | Apply | 1 (Easy)] Write an SQL query to delete all records from the table Student where Enrollment_Date is older than '2020-01-01'.
+[5M | Apply | 2 (Average)] Given a table Products (Product_ID, Product_Name, Price), write an SQL query to update the price of a product with Product_ID = P101 to 25% higher than its current price.
+[5M | Apply | 1 (Easy)] Write an SQL query to retrieve the names and salaries of employees, where the salary is between 30000 and 60000, sorted in ascending order of salary.
+[5M | Apply | 1 (Easy)] Write an SQL query to create a table Products with columns Product_ID (Primary Key), Product_Name, Category, Price, and Stock. The Price should have a default value of 100.
+[5M | Apply | 1 (Easy)] Write an SQL query to fetch the first name, last name, and hire date of employees whose name starts with 'A' or 'J' from the Employees table.
+[5M | Apply | 2 (Average)] Write an SQL query to find the average price of all products in the Products table, with a Category of 'Electronics', using the AVG() function.
+[5M | Apply | 2 (Average)] Given a Customers (Customer_ID, Customer_Name, Contact_Number) table, write an SQL query to retrieve customer names who have no contact number listed.
+[5M | Apply | 2 (Average)] Write an SQL query to update the Stock value in the Products table by 10% for all products in the 'Books' category.
+[5M | Apply | 1 (Easy)] Write an SQL query to delete all records from the Products table where the Stock is zero or less.
+[5M | Apply | 1 (Easy)] Write an SQL query to add a Date_of_Joining column (with DATE datatype) to the Employees table.
+[5M | Apply | 1 (Easy)] Write an SQL query to retrieve the names of employees who have not been assigned to a department. Assume there is a Department table with Dept_ID and an Employees table with a Dept_ID.
+[5M | Apply | 1 (Easy)] Write an SQL query to display all the unique job titles from the Employees table using the DISTINCT keyword.
+[5M | Apply | 1 (Easy)] Write an SQL query to find the names and prices of products that have a price between 100 and 500 in the Products table. Use BETWEEN operator.
+[10M | Analyze | 3] Consider the following employee database.                                      Employee (empname, street, city, date_of_joining)                                 Works (empname, company_name, salary)                                            Company (company_name, city)                                                          Manages (empname, manager_name)                                                    Write SQL queries for the following statements:
+i) Modify the database so that employee “Sachin” now lives in “Mumbai”
+ii) Find the number of employees in each city with date_of_joining as “01-Aug-2017”
+iii) List the name of companies starting with the letter “A”
+[10M | Understand | 2] What are Constraints? What are the syntaxes for the different types of constraints to be applied when creating tables and over existing tables?
+[10M | Analyze | 3] Consider the following tables:
+Works (Pname, Cname, Salary)
+Lives (Pname, Street, City)
+Located-in (Cname, City)
+Write the following queries in SQL
+a. List the names of the people who work for the company “Wipro” along with cities they live in
+b. Find the names of the persons who do not work for “Infosys”
+[10M | Analyze | 3] For the relation Branch (branch_name, city, assets)
+1) Find the names of all branches that have assets greater than those of at least one branch located in Mumbai
+2) Find the names of all branches that have assets greater than each branch located in Mumbai
+3) Find the number of branches located in each city
+[10M | Understand | 3 (Difficult)] What is the role of Data Control Language (DCL) commands in SQL? Explain with examples.
+[10M | Apply | 2 (Average)] Write an SQL query to retrieve the top 5 highest paid employees from the employees table using the ORDER BY clause.
+[10M | Analyze | 3 (Difficult)] Many assume that INNER JOIN is always the most efficient way to join tables. What are the potential risks or limitations of relying solely on INNER JOIN in large datasets?
+[10M | Analyze | 3 (Difficult)] It is often stated that using TRUNCATE is faster than DELETE due to less logging. Do you agree? How might the differences between DELETE and TRUNCATE affect system performance in different scenarios?
+[10M | Analyze | 3 (Difficult)] SQL transactions are generally assumed to be atomic, consistent, isolated, and durable (ACID). Are there cases where relaxing any of these properties might be justified?
+[10M | Evaluate | 3 (Difficult)] Why is it crucial to understand the concept of referential integrity when working with foreign keys in relational databases? What are the potential consequences of ignoring it?
+[10M | Analyze | 3 (Difficult)] SQL allows different types of joins. Why is it necessary to understand the difference between INNER JOIN, LEFT JOIN, and RIGHT JOIN? How do these joins impact the results of a query?
+[10M | Analyze | 3 (Difficult)] Discuss the advantages and disadvantages of using Data Definition Language (DDL) in a production database. How can the use of DDL be optimized for performance and security in real-time applications?
+[10M | Understand | 2 (Average)] Differentiate between Data Manipulation Language (DML) and Data Definition Language (DDL) in terms of their impact on the database structure and data. How do they complement each other in a database system?
+[10M | Evaluate | 3 (Difficult)] What are the potential risks and rewards of using Data Control Language (DCL) in a multi-user environment? Discuss its implications on database security, access control, and permissions.
+[10M | Analyze | 3 (Difficult)] SQL is often considered an industry standard for querying databases. Discuss its limitations and compare it with NoSQL databases. When might one be preferred over the other in real-world applications?
+[10M | Evaluate | 3 (Difficult)] From a performance optimization perspective, why is it recommended to use constraints like PRIMARY KEY, FOREIGN KEY, and UNIQUE in a relational database? What are the trade-offs involved in enforcing these constraints?
+[10M | Analyze | 2 (Average)] How does SQL’s Data Integrity Constraints differ in their approaches to ensuring data accuracy across different database systems (e.g., MySQL, PostgreSQL, Oracle)? Compare the best practices in implementing these constraints.
+[10M | Analyze | 3 (Difficult)] Aggregate functions like COUNT, SUM, and AVG are widely used in SQL queries. Discuss the pros and cons of using aggregate functions in large datasets. How does the data structure influence their efficiency?
+[10M | Understand | 2 (Average)] Discuss the role of GROUP BY and HAVING clauses in SQL queries. How does the use of HAVING after GROUP BY offer a different perspective in filtering grouped data, and in which scenarios would you use each?
+[10M | Evaluate | 3 (Difficult)] From a database administrator's viewpoint, how do the SQL Transaction Control Language (TCL) commands (COMMIT, ROLLBACK, SAVEPOINT) affect the reliability and consistency of a database? What challenges do administrators face when managing transactions?
+[10M | Analyze | 3 (Difficult)] SQL queries often rely on JOIN operations to combine data from multiple tables. What are the advantages and potential issues with using INNER JOIN versus OUTER JOIN in database design? Discuss scenarios where each is most effective.
+[10M | Evaluate | 3 (Difficult)] What are the implications of using Data Definition Language (DDL) commands such as DROP and ALTER in a live production database? Discuss the consequences of accidental data loss or structure modification.
+[10M | Evaluate | 3 (Difficult)] How does the use of Data Control Language (DCL) impact the database security in multi-user environments? Discuss the potential consequences of improper permission management and unauthorized access.
+[10M | Evaluate | 2 (Average)] What are the consequences of not enforcing proper Data Integrity Constraints in a database system? Discuss how the absence of constraints like PRIMARY KEY, FOREIGN KEY, and CHECK can lead to data anomalies.
+[10M | Evaluate | 3 (Difficult)] How does using SQL's Transaction Control Language (TCL) commands such as COMMIT and ROLLBACK impact the consistency and reliability of data during concurrent transactions? Discuss the potential consequences in scenarios of system failure.
+[10M | Analyze | 3 (Difficult)] What is the impact of using GROUP BY and HAVING clauses on query performance, particularly in large databases? Discuss the trade-offs between query optimization and complexity when grouping large datasets.
+[10M | Evaluate | 3 (Difficult)] Discuss the potential consequences of improper use of aggregate functions like SUM or AVG in SQL queries. How could inaccurate data aggregation lead to faulty business insights and decision-making?
+[10M | Evaluate | 3 (Difficult)] What are the consequences of not properly managing SQL query transactions, particularly when handling critical data changes in an enterprise system? How can improper transaction handling affect data integrity?
+[10M | Evaluate | 2 (Average)] How do improper JOIN operations in SQL (e.g., using INNER JOIN when OUTER JOIN is required) affect the outcome of a query? What are the consequences of losing necessary data when selecting the wrong type of join?
+[10M | Evaluate | 3 (Difficult)] Discuss the long-term implications of using poorly defined database schemas in SQL. How could it affect future data migration, scalability, and system performance?
+[10M | Evaluate | 3 (Difficult)] What are the potential consequences of not ensuring data consistency through SQL constraints and triggers in high-availability systems? How could this lead to data corruption or system crashes?
+[10M | Apply | 2 (Average)] Write an SQL query to find the names of employees from the table Employees who are in the department with ID D002, using INNER JOIN with the Department table (assuming the department details are in a table called Department).
+[10M | Apply | 3 (Difficult)] Write an SQL query to retrieve the second highest salary from the table Employee (Emp_ID, Emp_Name, Emp_Salary).
+[10M | Apply | 2 (Average)] Write an SQL query to list all Employees who have worked more than 5 years, given the Hire_Date field in the Employees table.
+[10M | Apply | 2 (Average)] Write an SQL query to create a table Books with the following fields: Book_ID (Primary Key), Title, Author, Publish_Date, and Price. Ensure that Price should not be NULL and Publish_Date must be a valid date.
+[10M | Apply | 2 (Average)] Write an SQL query to find the total number of employees in each department, assuming a Department table with a Dept_ID and Employees table with Dept_ID. Use GROUP BY and COUNT().
+[10M | Apply | 2 (Average)] Write an SQL query to retrieve the names and hire dates of employees from the Employees table who were hired in the last three months.
+[10M | Apply | 3 (Difficult)] Write an SQL query to create a Students table with Student_ID, First_Name, Last_Name, Date_Of_Birth, Gender, and Enrollment_Date (Primary Key). Make Gender a CHECK constraint with values 'M' or 'F'.
+[10M | Apply | 3 (Difficult)] Write an SQL query to find all students who have enrolled in the course 'DBMS' from the Enrollments table (with columns Student_ID, Course_Name, Enrollment_Date). Use GROUP BY and HAVING.
+[10M | Analyze | 2 (Average)] Write an SQL query to list the names and salaries of employees who have a salary higher than the average salary in the Employees table.
+[10M | Analyze | 2 (Average)] Write an SQL query to retrieve the names of all employees from the Employees table who are working in departments with more than 10 employees, using a Department table with Dept_ID and Dept_Name.
+[10M | Apply | 2 (Average)] Write an SQL query to find the highest salary from each department in the Employees table using GROUP BY and MAX().
+[10M | Apply | 3 (Difficult)] Write an SQL query to create a Sales table with the following fields: Sale_ID (Primary Key), Product_ID, Quantity, Sale_Date. The Product_ID is a foreign key referencing Product_ID from the Products table.
+[10M | Apply | 2 (Average)] Write an SQL query to retrieve the names of customers and their total purchase amount from the Purchases table, where the purchase amount is greater than 100. Use SUM() and GROUP BY clauses.
+[10M | Evaluate | 3 (Difficult)] Reflecting on SQL's data manipulation capabilities, how does the use of JOIN improve database querying compared to multiple SELECT statements? Provide an example using a Customers and Orders table to support your argument.
+[10M | Evaluate | 3 (Difficult)] Consider an e-commerce database with Products, Orders, and Customers tables. How can you design an optimized SQL query to calculate the total sales per product over time, considering potential performance issues with large datasets?
+[10M | Analyze | 3 (Difficult)] How would you compare the use of IN, EXISTS, and JOIN in SQL? Discuss the advantages and limitations of each, providing real-world examples where each might be preferable.
+[10M | Evaluate | 3 (Difficult)] Reflect on the implications of using TRUNCATE versus DELETE commands in SQL. What are the potential advantages and risks of using each, and in which situations should one be preferred over the other?
+[10M | Analyze | 2 (Average)] When designing a database, how would you decide whether to use a PRIMARY KEY or UNIQUE constraint for a field? Reflect on their roles in maintaining data integrity, and provide examples of when each is most appropriate.
+[10M | Evaluate | 3 (Difficult)] Reflect on the role of ACID properties in SQL transactions. How do they ensure data consistency and integrity in multi-user environments? Provide an example where transaction control in SQL (e.g., COMMIT, ROLLBACK) is essential.
+[10M | Evaluate | 3 (Difficult)] How would you justify the decision to use GROUP BY in SQL to aggregate data versus using JOIN for combining data from multiple tables? What are the performance and data accuracy considerations in each approach?
+[10M | Analyze | 3 (Difficult)] SQL offers multiple ways to enforce data integrity, such as using CHECK constraints and TRIGGERS. Reflect on the differences between these two approaches in ensuring data correctness. Which would you recommend for different scenarios?
+[10M | Analyze | 3 (Difficult)] Considering a scenario where you need to optimize queries that retrieve large datasets, how would you adjust the SQL queries to ensure they are both efficient and easy to scale? Reflect on query optimization techniques and indexing.
+[10M | Evaluate | 3 (Difficult)] Reflecting on SQL commands like INSERT, UPDATE, and DELETE, how does their transactional nature influence the reliability and consistency of data during concurrent operations? Provide a use case where transaction control is vital.
+
+
+==================== CO4 ====================
+[2M | Remember | 1] What is a nested subquery? Provide an example.
+[2M | Understand | 1] What are the different types of joins in SQL?
+[2M | Remember | 1] Define a view in SQL and explain its advantages.
+[2M | Apply | 2] Write a SQL query to create a view for employees with a salary greater than 50000.
+[2M | Apply | 1] Write a SQL query to grant SELECT privilege on a table to a user.
+[2M | Remember | 1] What is a cross join? Provide an example.
+[2M | Remember | 1] What is the purpose of the GRANT statement in SQL? Provide an example.
+[2M | Understand | 1] Describe the REVOKE statement and its significance in database security.
+[2M | Apply | 1] Write a SQL query to revoke SELECT privilege from a user on a specific table.
+[2M | Remember | 1] What is the purpose of the SQL SELECT statement? Provide an example.
+[2M | Apply | 1] Write a SQL query to retrieve distinct values from a column in a table.
+[2M | Remember | 1] What is the purpose of the SQL WHERE clause? Provide an example.
+[2M | Remember | 1] What is the significance of using comments in SQL queries?
+[2M | Apply | 1] Write a SQL query to find the maximum salary from the employees table.
+[5M | Understand | 2 (Average)] Explain the concept of referential integrity in SQL.
+[5M | Understand | 2 (Average)] Explain the Selection operation in Relational Algebra.
+[5M | Understand | 1 (Easy)] Write a note on nested queries.
+[5M | Analyze | 2 (Average)] What are the differences between a inner join and an outer join?
+[5M | Understand | 2 (Average)] Explain the Set difference operation in relational Algebra.
+[5M | Understand | 1 (Easy)] What is a subquery? Give examples.
+[5M | Analyze | 2 (Average)] What are the differences between an inner join and a natural join?
+[5M | Remember | 1 (Easy)] How is a VIEW dropped in SQL?
+[5M | Understand | 1 (Easy)] Why is relational algebra called a non-procedural language?
+[5M | Understand | 2] What is an assertion in SQL? Provide an example.
+[5M | Understand | 2] Explain the purpose of triggers in SQL.
+[5M | Apply | 2] Write a SQL statement to create a trigger that updates the salary of an employee when their position changes.
+[5M | Analyze | 2] Discuss the importance of database security and authorization.
+[5M | Understand | 2] What is the purpose of granting privileges in SQL?
+[5M | Understand | 2] Explain how to revoke authorization in SQL.
+[5M | Analyze | 2] What is the difference between tuple relational calculus and domain relational calculus?
+[5M | Apply | 2] Provide an example of a SQL query using a nested subquery.
+[5M | Understand | 2] Explain the concept of data integrity and its importance in SQL.
+[5M | Understand | 2] What are the different types of triggers in SQL?
+[5M | Understand | 2] Explain the concept of a self-join with an example.
+[5M | Analyze | 2] Discuss the concept of database authorization and its significance.
+[5M | Analyze | 2] What is the purpose of using views in SQL? Discuss their advantages and disadvantages.
+[5M | Apply | 2] Write a SQL query to create a view that shows the total sales per product.
+[5M | Understand | 2] Explain the concept of a materialized view and its benefits.
+[5M | Analyze | 2] What are the differences between a view and a table in SQL?
+[5M | Apply | 2] Write a SQL query to demonstrate the use of a right join.
+[5M | Understand | 2] Explain the concept of data encryption in database security.
+[5M | Understand | 2] What is a database trigger? Discuss its types and use cases.
+[5M | Understand | 2] Explain the concept of a database role and its advantages.
+[5M | Analyze | 2] Discuss the importance of auditing in database security.
+[5M | Understand | 2] What is the difference between a primary key and a foreign key in terms of referential integrity?
+[5M | Understand | 2] Explain the concept of cascading actions in referential integrity.
+[5M | Apply | 2] Write a SQL query to demonstrate the use of cascading delete.
+[5M | Understand | 2] Explain the concept of data masking and its importance in database security.
+[5M | Apply | 2] Write a SQL query to create a nested subquery that retrieves employees with salaries higher than the average salary.
+[5M | Understand | 2] Explain the concept of SQL functions and provide examples of aggregate functions.
+[5M | Understand | 2] What is the purpose of the GROUP BY clause in SQL? Provide an example.
+[5M | Apply | 2] Write a SQL query that uses the HAVING clause to filter results from a GROUP BY operation.
+[5M | Apply | 2] Write a SQL query to demonstrate the use of a correlated subquery.
+[5M | Analyze | 2] What are the advantages of using stored procedures in SQL?
+[5M | Understand | 2] Explain the concept of data integrity constraints in SQL and provide examples.
+[5M | Understand | 2] Explain the ACID properties of transactions in SQL.
+[5M | Apply | 2] Write a SQL query to demonstrate the use of the COMMIT and ROLLBACK statements.
+[5M | Understand | 2] Explain the concept of a database schema and its components.
+[5M | Apply | 2] Write a SQL query to update records in a table based on a condition.
+[5M | Understand | 2] Explain the concept of a database management system (DBMS) and its functions.
+[5M | Apply | 2] Write a SQL query to retrieve all employees whose last name starts with 'S'.
+[5M | Apply | 2] Create a SQL query to find the total number of orders placed by each customer.
+[5M | Apply | 2] Write a SQL query to list all products that have a price between $10 and $50.
+[5M | Apply | 2] Create a SQL query to retrieve the names of customers who have not placed any orders.
+[5M | Apply | 2] Write a SQL query to calculate the average salary of employees in each department.
+[5M | Apply | 2] Write a SQL query to find all employees who were hired in the last 30 days.
+[5M | Apply | 2] Create a SQL query to list all orders along with the corresponding customer names.
+[5M | Apply | 2] Write a SQL query to retrieve the top 5 highest-paid employees.
+[5M | Apply | 2] Write a SQL query to find the total sales for each product category.
+[5M | Apply | 2] Create a SQL query to list all employees who have the same job title as 'Manager'.
+[5M | Apply | 2] Write a SQL query to find the number of distinct products sold in the last month.
+[5M | Apply | 2] Write a SQL query to retrieve all customers who live in 'New York' or 'Los Angeles'.
+[5M | Apply | 2] Create a SQL query to find the total number of employees in each department.
+[5M | Apply | 2] Write a SQL query to list all products that are out of stock.
+[5M | Apply | 2] Write a SQL query to find the employee with the second highest salary.
+[5M | Apply | 2] Create a SQL query to retrieve all orders placed in the last week.
+[5M | Apply | 2] Write a SQL query to find all customers who have placed more than 3 orders.
+[5M | Apply | 2] Write a SQL query to retrieve the names of employees along with their department names.
+[10M | Understand | 2 (Average)] Explain Joins and types of Joins with suitable examples
+[10M | Apply | 3 (Difficult)] Explain the following Relational Algebra operations with suitable example
+a. Union 
+b. Cartesian Product                                                                                   c. Project                                                                                                   d. Select
+[10M | Apply | 2 (Average)] Consider the following database table: Emp (eid, ename, salary, address, deptid) Dept (deptid, dname, address). Construct the following SQL queries:a. Find the name of employee whose address is “Bandra”.b. Find name of employee earning highest salary. c. Find all employees working for the “HR” department. d. Delete the record of the employee with minimum salary.
+[10M | Understand | None] Explain the different operators in Relational Algebra.
+[10M | Analyze | None] Consider the following database table. 
+Emp (eid, ename, salary, salary, address, deptid)
+Dept (deptid, dname, address)
+Construct the following SQL query for this relational database.
+a. Find the name of employee whose address is “bandra”
+b. Find name of employee earning highest salary 
+c. Find all employee working for “HR” department 
+d. Delete record of employee with minimum salary
+[10M | Apply | 3 (Difficult)] Consider the following schema for Institute Library: Student (Roll No, Name, Father_Name, Branch), Book (ISBN, Title, Author, Publisher), Issue (Roll No, ISBN, Date_of_Issue). Write SQL queries for the following statements: i. List Roll Number and Name of all students of the branch CSE. ii. Find the name of students who have issued a book published by ‘ABC’ publisher. iii. List title of all books and their author issued by student ‘Prashant’. iv. List title of all books issued on or before 1st Jan 2014.
+[10M | Analyze | 3] Discuss the role of relational algebra operations in SQL.
+[10M | Apply | 3] Create a SQL query that demonstrates the use of multiple joins.
+[10M | Apply | 3] Write a SQL query to create an assertion that ensures the total salary of employees does not exceed a certain limit.
+[10M | Evaluate | 3] Discuss the implications of not enforcing referential integrity in a database.
+[10M | Apply | 3] Write a SQL query to create a trigger that logs changes to a specific table.
+[10M | Analyze | 3] Discuss the role of SQL assertions in maintaining data integrity.
+[10M | Evaluate | 3] Explain the concept of SQL injection and how to prevent it.
+[10M | Apply | 3] Write a SQL query to create a role and grant it specific privileges.
+[10M | Evaluate | 3] What are the best practices for securing a database?
+[10M | Analyze | 3] Discuss the differences between SQL and NoSQL databases in terms of data integrity and security.
+[10M | Understand | 3] Explain the concept of database normalization and its impact on data integrity.
+[10M | Apply | 3] Write a SQL query to create a stored procedure that calculates the total sales for a given product.
+[10M | Analyze | 3] Discuss the role of indexes in improving query performance and their impact on data integrity.
+[10M | Evaluate | 3] Discuss the importance of transaction management in SQL.
+[10M | Evaluate | 3] Discuss the implications of data breaches in database security.
+[10M | Apply | 3] Create a SQL query to find the total revenue generated from sales in the last quarter.
+[10M | Apply | 3] Write a SQL query to list all customers who have not made any purchases in the last year.
+[10M | Apply | 3] Write a SQL query to find the average order value for each customer.
+[10M | Apply | 3] Create a SQL query to retrieve the names of employees who have received a raise in the last year.
+[10M | Apply | 3] Write a SQL query to find the total number of products sold by each salesperson.
+[10M | Apply | 3] Write a SQL query to list all customers along with their total purchase amount.
+[10M | Apply | 3] Create a SQL query to find the most popular product based on the number of orders.
+[10M | Apply | 3] Write a SQL query to retrieve all employees who have not taken any vacation days.
+[10M | Apply | 3] Write a SQL query to find the total number of orders placed in each month of the current year.
+[10M | Apply | 3] Create a SQL query to list all products that have been ordered more than a specified number of times.
+[10M | Apply | 3] Write a SQL query to find the employee with the highest sales in each department.
+[10M | Apply | 3] Write a SQL query to retrieve the details of the last 5 orders placed in the system.
+[10M | Analyze | 3] A retail company has a database that tracks customers, orders, and products. The company wants to ensure that only authorized employees can access sensitive customer information. How would you implement security measures to protect customer data in the database? Discuss the use of roles, privileges, and views.
+[10M | Apply | 3] A university database contains tables for students, courses, and enrollments. The administration wants to enforce referential integrity to ensure that students can only enroll in courses that exist. Describe how you would set up referential integrity constraints in the database. Provide SQL examples.
+[10M | Create | 3] A banking system requires that all transactions are logged for auditing purposes. The system uses triggers to monitor changes to account balances. Design a trigger that logs any changes to account balances, including the old and new values. Provide the SQL code for the trigger.
+[10M | Apply | 3] An e-commerce platform wants to analyze customer purchasing behavior. They need to generate reports on total sales per product category and identify the top-selling products. Write SQL queries that would help the company generate these reports. Discuss how you would optimize these queries for performance.
+[10M | Analyze | 3] A healthcare provider's database contains sensitive patient information. The organization wants to implement data masking for certain fields to protect patient privacy. Explain how you would implement data masking in the database. Provide examples of SQL queries that demonstrate this concept.
+[10M | Evaluate | 3] A company is experiencing issues with SQL injection attacks on their web application. They want to enhance their database security measures. Discuss the strategies you would recommend to prevent SQL injection attacks. Provide examples of secure coding practices.
+[10M | Analyze | 3] A project management database tracks tasks, employees, and project deadlines. The management wants to ensure that only project managers can modify task assignments. Describe how you would implement authorization controls in the database to restrict access based on user roles.
+[10M | Create | 3] A travel agency's database needs to track customer bookings, payments, and itineraries. They want to ensure data integrity across all related tables. Explain how you would design the database schema to enforce data integrity. Include examples of primary and foreign keys.
+[10M | Apply | 3] A social media platform wants to analyze user engagement metrics. They need to generate reports on user activity, including posts, comments, and likes. Write SQL queries that would help the platform generate these reports. Discuss how you would handle large datasets efficiently.
+[10M | Create | 3] A logistics company needs to track shipments, delivery statuses, and customer feedback. They want to implement triggers to automatically update shipment statuses based on certain conditions. Design a trigger that updates the shipment status when a delivery is marked as complete. Provide the SQL code for the trigger.
+[10M | Apply | 3] A healthcare database needs to track patient appointments and ensure that no double bookings occur. They want to enforce this rule through database constraints. Describe how you would implement constraints to prevent double bookings. Provide SQL examples.
+[10M | Apply | 3] A travel agency wants to analyze customer feedback on their services. They need to generate reports on customer satisfaction ratings. Write SQL queries that would help the agency generate these reports. Discuss how you would handle missing data in the analysis.
+[10M | Create | 3] A restaurant management system needs to track reservations and ensure that tables are not double-booked. They want to implement constraints to enforce this rule. Explain how you would set up the database schema to prevent double bookings, including the use of primary and foreign keys.
+
+
+==================== CO5 ====================
+[2M | Understand | None] What is meant by partial functional dependency?
+[2M | Remember | 1 (Easy)] Define Pitfalls in Relational Database Design.
+[2M | Understand | 1 (Easy)] Describe the concept of redundancy in relational databases.
+[2M | Understand | 2 (Average)] Explain the impact of inconsistent data on relational database design.
+[2M | Analyze | 2 (Average)] What are anomalies in relational databases? Discuss how update, insertion, and deletion anomalies occur.
+[2M | Remember | 1 (Easy)] Define superkey and candidate key. Discuss their roles in functional dependencies.
+[2M | Understand | 1 (Easy)] Explain the importance of preserving dependencies during normalization.
+[2M | Remember | 1 (Easy)] What is functional dependency? List the types of functional dependencies.
+[2M | Understand | 1 (Easy)] Describe the difference between a superkey and a candidate key.
+[2M | Understand | 1] Explain 1st Normal Form (1NF) and provide an example of a table in 1NF.
+[2M | Understand | 2] Explain the concept of 2NF and illustrate it with an example.
+[2M | Understand | 2] How does 3NF improve data integrity? Explain with an example.
+[2M | Understand | 2] Explain 3NF and its significance in ensuring data integrity. Provide an example.
+[2M | Remember | 1] List the types of anomalies that occur in relational databases.
+[2M | Remember | 2] Define functional dependency and provide examples of each type.
+[2M | Understand | 1] Describe the concept of atomic values in 1NF with an example.
+[2M | Understand | 1] Explain how a candidate key is different from a primary key.
+[2M | Remember | 1] List the anomalies that can occur when a database is not normalized.
+[2M | Understand | 1] Explain the term "redundancy" in the context of databases and provide an example.
+[2M | Understand | 2] Define the term "NULL" in a relational database and discuss its overuse.
+[2M | Understand | 1] What is the difference between a superkey and a primary key? Provide examples.
+[2M | Understand | 1] Describe the concept of redundancy in database design with examples.
+[2M | Remember | 1] List and explain the types of anomalies in database management systems.
+[2M | Understand | 1] What is a candidate key and how does it differ from a primary key?
+[2M | Understand | 1] Explain the concept of atomic values in relation to 1NF with an example.
+[2M | Remember | 2] Define and explain the term "functional dependency" with examples.
+[2M | Understand | 2] Discuss the concept of non-transitive dependency and how to eliminate it.
+[2M | Understand | 1] What is the significance of a superkey? Explain with an example.
+[2M | Remember | 2] Define functional dependency and discuss how it helps in normalization.
+[2M | Understand | 2] How can partial dependency affect 2NF? Explain with an example.
+[2M | Understand | 2] Define redundancy in database design. Explain its impact on database performance.
+[2M | Remember | 1] What is a primary key? How does it differ from a candidate key?
+[2M | Understand | 2] Explain the concept of data integrity and its importance in relational databases.
+[2M | Understand | 1] Define and explain the concept of functional dependency. How does it relate to normalization?
+[2M | Remember | 1] Define the concept of "atomic values" in 1NF. How does it differ from non-atomic values?
+[2M | Understand | 1] Define a superkey. Explain its importance in functional dependency and key determination.
+[2M | Remember | 2 (Average)] Define 3NF and explain how it is used to achieve database integrity by removing transitive dependencies.
+[2M | Understand | 2 (Average)] Define and explain the concept of data anomalies. How do normalization techniques help resolve them?
+[2M | Understand | 1 (Easy)] Define and explain the concept of a primary key. How does it relate to functional dependencies?
+[2M | Remember | 1 (Easy)] Define functional dependency. How does it help in understanding database design?
+[2M | Remember | 2 (Average)] Define transitive dependency. How does it violate 3NF? Provide an example.
+[2M | Remember | 2 (Average)] Define 2NF. How does it address partial dependencies? Provide an example.
+[5M | Analyze | None] Every relation in BCNF is also in 3NF
+-  Justify the above statement.
+[5M | Understand | None] What are the different types of dependencies? Explain with example.
+[5M | Analyze | None] Consider a relation R with five attributes A, B, C, D and E. You are given the following dependencies:  A→B      BC→E     ED→A
+a. Is R in 3NF?
+b. Is R in BCNF?
+[5M | Understand | None] What is BCNF? Explain with an example.
+[5M | Apply | 3 (Difficult)] Solve an example showing the normalization process from 1NF to 3NF.
+[5M | Analyze | 2 (Average)] Differentiate between 1NF and 2NF, and explain the significance of partial dependency.
+[5M | Apply | 2 (Average)] Identify the functional dependencies in the following relation: Student_ID, Course_ID, Instructor, Instructor_Phone.
+[5M | Analyze | 3 (Difficult)] Compare BCNF and 3NF, and discuss the issues resolved by BCNF.
+[5M | Understand | 1 (Easy)] Explain the concept of 2NF and how it eliminates partial dependency.
+[5M | Understand | 3 (Difficult)] Explain why 3NF is considered to be better than 2NF in relational design.
+[5M | Understand | 3] Define Boyce-Codd Normal Form (BCNF). How is it stricter than 3NF?
+[5M | Understand | 3] What is a multi-valued dependency? Explain how 4NF resolves it.
+[5M | Analyze | 2] Differentiate between partial dependency and transitive dependency.
+[5M | Apply | 2] Apply the process of normalization to convert the following relation to 2NF.
+[5M | Analyze | 2] How does 1NF differ from 2NF? Explain with an example.
+[5M | Apply | 3] Explain with an example how to convert a table to Boyce-Codd Normal Form.
+[5M | Understand | 2] Define normalization. Discuss its importance in relational database design.
+[5M | Apply | 2] Discuss the process of eliminating partial dependency to achieve 2NF.
+[5M | Analyze | 2] Compare and contrast 2NF and 3NF with examples of each.
+[5M | Apply | 2] Explain how a relation in 2NF can be converted to 3NF. Provide an example.
+[5M | Analyze | 2] Differentiate between 2NF and 3NF with respect to partial and transitive dependencies.
+[5M | Apply | 2] Demonstrate the normalization of a table from 1NF to 2NF with an example.
+[5M | Understand | 2] How does normalization affect query performance in relational databases?
+[5M | Analyze | 2] Discuss the impact of non-scalable designs on relational database performance.
+[5M | Apply | 2] Explain how partial dependency can violate 2NF and how to eliminate it.
+[5M | Apply | 2] Demonstrate the process of normalizing a relation from 2NF to 3NF.
+[5M | Understand | 3] Discuss the significance of Boyce-Codd Normal Form (BCNF) in database design.
+[5M | Understand | 2] Define transitive dependency and explain how it can be removed in 3NF.
+[5M | Understand | 2] Discuss how the use of NULL values can affect data integrity in relational databases.
+[5M | Understand | 2] Explain how normalization helps in reducing data redundancy. Provide an example.
+[5M | Understand | 2] How does 3NF improve data integrity and why is it important?
+[5M | Understand | 3] Define Boyce-Codd Normal Form (BCNF). Explain its strictness compared to 3NF.
+[5M | Apply | 2] Explain the steps to eliminate partial dependency in 2NF with an example.
+[5M | Understand | 2] Explain the importance of normalization in avoiding anomalies in databases.
+[5M | Analyze | 3] Differentiate between 3NF and BCNF. Provide examples of tables in each.
+[5M | Apply | 2] Define and provide an example of multi-valued dependency and its elimination.
+[5M | Understand | 2] What are transitive dependencies? How do they affect 3NF?
+[5M | Analyze | 3] Analyze a given relation and show how to normalize it to 3NF.
+[5M | Understand | 3] Explain the concept of Boyce-Codd Normal Form (BCNF) and how it differs from 3NF.
+[5M | Analyze | 2] Identify the issues caused by non-scalable designs in database management.
+[5M | Apply | 2] Explain the process of identifying functional dependencies in a relation.
+[5M | Apply | 2] Demonstrate how to eliminate transitive dependency to achieve 3NF.
+[5M | Apply | 1] Define the concept of a candidate key and explain how to determine it in a relation.
+[5M | Understand | 2] Discuss the role of functional dependencies in reducing data redundancy in database design.
+[5M | Understand | 1] Discuss the significance of atomic values in achieving 1NF. Provide an example.
+[5M | Apply | 2] Define transitive dependency with an example and explain how to eliminate it.
+[5M | Understand | 2] Explain the significance of 3NF in database design. Provide an example of a relation that violates 3NF.
+[5M | Understand | 2] How can functional dependencies be used to identify keys in a relation?
+[5M | Understand | 3] Define Boyce-Codd Normal Form (BCNF). Explain its significance over 3NF.
+[5M | Understand | 2] What is the impact of overuse of NULL values in relational databases?
+[5M | Understand | 1] Define redundancy and explain how it leads to inefficient database design.
+[5M | Apply | 2] Demonstrate how to normalize a given relation to achieve 2NF with an example.
+[5M | Understand | 2] Discuss the process of normalization from 2NF to 3NF. Provide an example of a relation.
+[5M | Analyze | 2] What are the challenges in database design related to overuse of NULL values?
+[5M | Understand | 1] Explain how normalization helps in organizing data efficiently by reducing anomalies.
+[5M | Understand | 2] Discuss the role of functional dependencies in 3NF. Explain with an example.
+[5M | Understand | 1] Define the 1st Normal Form (1NF) and explain how a table violates 1NF. Provide an example.
+[5M | Understand | 2] Explain the impact of transitive dependency in relation to 3NF. Provide an example of a relation that violates 3NF.
+[5M | Analyze | 2] What are the key differences between 3NF and BCNF in terms of data integrity?
+[5M | Understand | 1] Discuss the role of 1NF in eliminating repeating groups in a table. Provide an example.
+[5M | Understand | 2] Define multi-valued dependency and explain its impact on database normalization.
+[5M | Understand | 1] Explain the difference between a candidate key and a superkey. Provide an example.
+[5M | Analyze | 2] Discuss the challenges in database design when dealing with non-scalable designs.
+[5M | Understand | 3] Explain the concept of 4NF and the types of dependencies it addresses. Provide an example of a relation violating 4NF.
+[5M | Apply | 2] Describe the process of eliminating partial dependency to achieve 2NF with an example.
+[5M | Analyze | 2] Analyze the significance of data integrity in the context of functional dependencies.
+[5M | Understand | 2] How does normalization improve database design in terms of reducing anomalies? Provide an example.
+[5M | Understand | 1] Explain how normalization helps to minimize anomalies like deletion anomalies.
+[5M | Apply | 2] Demonstrate the process of eliminating transitive dependency and achieving 3NF.
+[5M | Understand | 1] Discuss the impact of data redundancy in relational database systems and explain how normalization addresses this issue.
+[5M | Understand | 2] Discuss how the concept of candidate keys relates to data integrity and database normalization.
+[5M | Understand | 2] Explain how normalization helps in improving query performance. Provide an example.
+[5M | Understand | 2 (Average)] Discuss how normalization helps in eliminating insertion anomalies in relational databases.
+[5M | Understand | 2 (Average)] Explain the impact of non-key attributes on database design and how to manage them using functional dependencies.
+[5M | Understand | 2 (Average)] Define and explain the concept of Boyce-Codd Normal Form (BCNF). How does it differ from 3NF?
+[5M | Understand | 2 (Average)] Explain the concept of multivalued dependency and how it is resolved in 4NF. Provide an example.
+[5M | Analyze | 2 (Average)] Analyze the role of superkeys and candidate keys in ensuring functional dependencies in database design.
+[5M | Understand | 3 (Difficult)] Explain how normalization prevents poor data integrity. Provide an example where 3NF resolves data integrity issues.
+[5M | Understand | 3 (Difficult)] Discuss how multi-valued dependencies can violate 4NF and provide steps to resolve such violations.
+[5M | Understand | 1 (Easy)] Define atomic values and their significance in 1NF. Provide an example where non-atomic values violate 1NF.
+[5M | Analyze | 2 (Average)] Discuss how the concept of partial dependency influences database design and how it can be avoided.
+[5M | Understand | 2 (Average)] What is 4NF? Explain how it differs from 3NF in terms of multi-valued dependencies.
+[5M | Understand | 2 (Average)] Define and explain transitive dependency in the context of 3NF. How can it be eliminated during normalization?
+[5M | Apply | 3 (Difficult)] Demonstrate how normalization from 2NF to BCNF helps in eliminating redundant data.
+[5M | Understand | 2 (Average)] Discuss the impact of NULL values on relational database design. How can it affect normalization?
+[5M | Understand | 2 (Average)] Explain how 3NF eliminates transitive dependencies in database design. Provide an example.
+[5M | Understand | 2 (Average)] Explain the role of superkeys and primary keys in determining functional dependencies.
+[5M | Remember | 2 (Average)] Define multi-valued dependency and explain how it violates 4NF. Provide an example.
+[5M | Understand | 2 (Average)] Discuss how normalization helps improve data integrity by eliminating redundancy. Provide an example.
+[5M | Understand | 3 (Difficult)] Explain how normalization resolves redundancy in a database. Provide an example where redundancy is reduced.
+[5M | Understand | 3 (Difficult)] Explain how to identify and eliminate partial dependencies when converting a relation from 1NF to 2NF.
+[5M | Understand | 2 (Average)] Discuss how normalization helps to remove data anomalies in database design. Provide an example.
+[5M | Understand | 2 (Average)] Explain how to identify a candidate key in a given relation. Provide an example.
+[5M | Understand | 2 (Average)] Discuss the concept of dependency preservation in normalization. How does it help maintain database integrity?
+[10M | Understand | None] Write a note on the different anomalies.
+[10M | Analyze | None] Consider the schema R = (A, B, C, D, E). The following set F of functional dependencies holds:
+A→BC, CD→E, B→D, E→A
+Give a lossless, dependency-preserving decomposition into 3NF of schema R
+[10M | Understand | None] What are the pitfalls in relational Database design?
+[10M | Analyze | None] Consider the following relation for published books: 
+BOOK (Book_title, Author_name, Book_type, List_price, Author_affil, Publisher)
+
+Author_affil refers to the affiliation of author. Suppose the following dependencies exist:
+Book_title → Publisher, Book_type 
+Book_type → List_price
+Author_name → Author_affil
+
+What normal form is the relation in?
+[10M | Understand | None] Explain normalization in detail.
+[10M | Analyze | None] Consider the relation User (UserID, User_Email, FName, Lname, City, State, Zip). Given that a user has unique UserID and User_Email,
+a. Identify the functional dependencies for User.
+b. Identify a candidate key using the functional dependencies arrived at in step (a).
+c. Normalize the relation up to 2NF.
+[10M | Understand | 1 (Easy)] Discuss the Boyce-Codd Normal Form (BCNF) and its role in removing anomalies.
+[10M | Understand | 2 (Average)] Define multi-valued dependency and discuss how 4NF eliminates it.
+[10M | Understand | 2 (Average)] Discuss the process of decomposition in normalization.
+[10M | Analyze | 2 (Average)] Analyze the significance of transitive dependency and its removal in 3NF.
+[10M | Apply | 3 (Difficult)] Apply 1NF, 2NF, and 3NF to the following relation and show the steps of normalization.
+[10M | Analyze | 2 (Average)] Analyze the significance of the Boyce-Codd Normal Form and when it should be applied.
+[10M | Understand | 2] Discuss the role of decomposition in database design. Why is it necessary?
+[10M | Analyze | 2] Discuss the significance of data integrity and how normalization enhances it.
+[10M | Analyze | 2] Explain how transitive dependency affects database design. How can it be eliminated in 3NF?
+[10M | Analyze | 2] Discuss the impact of inconsistent data on relational database design.
+[10M | Understand | 2] Discuss how the normalization process eliminates anomalies and improves data integrity.
+[10M | Analyze | 3] Analyze the given relation and demonstrate how to convert it to BCNF.
+[10M | Understand | 2] Define the concept of a superkey and demonstrate its role in functional dependencies.
+[10M | Analyze | 2] Discuss the significance of transitive dependency and how it affects data integrity.
+[10M | Understand | 3] What is the purpose of 4NF? Explain how it resolves multi-valued dependencies.
+[10M | Apply | 3] Identify the functional dependencies in the given relation and normalize it to 2NF.
+[10M | Understand | 2] Explain the concept of dependency preservation in 3NF and its importance.
+[10M | Understand | 2] Describe how normalization can eliminate insertion, update, and deletion anomalies.
+[10M | Understand | 3] Explain the concept of multi-valued dependency and how 4NF resolves it.
+[10M | Analyze | 3] Analyze the given relation and show how to apply BCNF to it.
+[10M | Analyze | 2] Explain the impact of non-scalable designs on database performance.
+[10M | Apply | 3] Provide an example of a table that violates 4NF and demonstrate how to normalize it.
+[10M | Understand | 2] Discuss the process of eliminating anomalies in a database by applying normalization.
+[10M | Understand | 3] Define multi-valued dependencies and explain their impact on database design.
+[10M | Apply | 3] Demonstrate the process of converting a relation into BCNF with an example.
+[10M | Apply | 1] Explain the steps involved in normalizing a database to 1NF. Provide an example.
+[10M | Analyze | 2] Analyze the impact of NULL values on database performance and integrity.
+[10M | Apply | 2] Discuss the process of converting a relation from 2NF to 3NF with an example.
+[10M | Understand | 2] Discuss how anomalies such as update, insertion, and deletion can be reduced through normalization.
+[10M | Apply | 3] Demonstrate how to normalize a table that contains a multi-valued dependency to 4NF.
+[10M | Understand | 2] Discuss the importance of functional dependency preservation in 3NF.
+[10M | Understand | 3] What is the role of dependency preservation in BCNF? Provide an example.
+[10M | Apply | 3] What are the steps involved in converting a database relation to BCNF?
+[10M | Apply | 3] Explain the impact of multi-valued dependencies and how to eliminate them to achieve 4NF.
+[10M | Analyze | 2] How does normalization contribute to improving query performance in a database?
+[10M | Understand | 2] How does normalization address the issue of update anomalies in relational databases?
+[10M | Apply | 3] Demonstrate the process of normalizing a relation from 1NF to 3NF with an example.
+[10M | Analyze | 2] Analyze a database schema and show how to eliminate anomalies by normalizing to 2NF.
+[10M | Understand | 1] Discuss how anomalies such as insertion anomalies can be avoided by normalization.
+[10M | Apply | 3] Explain how to achieve 4NF and provide an example of a table that violates 4NF.
+[10M | Understand | 1] How does normalization in relational database design minimize insertion anomalies?
+[10M | Analyze | 2] Analyze a relation and show the steps to eliminate update anomalies by normalizing it to 3NF.
+[10M | Apply | 3] Demonstrate the process of normalization from 1NF to 4NF with examples.
+[10M | Understand | 3] Define Boyce-Codd Normal Form (BCNF) and describe the procedure to convert a relation to BCNF.
+[10M | Analyze | 2] Analyze the advantages and disadvantages of applying BCNF over 3NF.
+[10M | Apply | 2] Explain the steps involved in converting a relation from 2NF to BCNF.
+[10M | Understand | 1] Explain how normalization helps in organizing data efficiently by reducing redundancy.
+[10M | Analyze | 2] Analyze a relation and demonstrate how to normalize it to 2NF by removing partial dependencies.
+[10M | Apply | 2] Demonstrate how to normalize a relation from 1NF to 3NF. Provide an example to illustrate each step.
+[10M | Understand | 2] What are the potential issues caused by inconsistent data in a database? How can normalization help in addressing them?
+[10M | Analyze | 2] Analyze the impact of non-transitive dependencies in achieving 3NF. Provide an example of a relation violating 3NF.
+[10M | Analyze | 3] Analyze a database schema and normalize it from 1NF to BCNF. Provide a detailed example of each step.
+[10M | Apply | 3 (Difficult)] Demonstrate how to achieve Boyce-Codd Normal Form (BCNF) from 3NF. Provide an example of a relation that violates BCNF.
+[10M | Apply | 3 (Difficult)] Demonstrate how to convert a relation to 3NF by eliminating transitive dependencies with an example.
+[10M | Analyze | 3 (Difficult)] Analyze the benefits of applying BCNF in relational database design. Provide an example to illustrate the concept.
+[10M | Apply | 2 (Average)] Demonstrate how normalization helps in reducing redundant data and improving data integrity in relational databases.
+[10M | Analyze | 2 (Average)] Analyze the impact of partial dependencies in database normalization. How does 2NF help eliminate them?
+[10M | Apply | 3 (Difficult)] Demonstrate the normalization process from 1NF to 4NF. Explain the role of each normal form with an example.
+[10M | Analyze | 3 (Difficult)] Analyze a given relation and normalize it from 1NF to 3NF by addressing functional dependencies.
+[10M | Apply | 3 (Difficult)] Demonstrate how to resolve insertion anomalies in a database schema by applying normalization.
+[10M | Analyze | 3 (Difficult)] Analyze a given relation and normalize it to BCNF. Explain the steps involved.
+[10M | Analyze | 3 (Difficult)] Analyze how BCNF resolves the anomalies caused by 3NF. Provide an example of a relation violating BCNF.
+[10M | Apply | 3 (Difficult)] Demonstrate normalization by converting a relation from 1NF to 3NF. Provide an example for each step.
+[10M | Analyze | 3 (Difficult)] Analyze a given relation and normalize it to 1NF. Provide detailed steps and explanation.
+[10M | Apply | 3 (Difficult)] Demonstrate how to achieve 2NF from 1NF by eliminating partial dependencies.
+[10M | Apply | 3 (Difficult)] Demonstrate the normalization process for a relation that violates 4NF. Show how multi-valued dependencies are removed.
+
+
+==================== CO6 ====================
+[2M | Apply | 2 (Average)] In order to undo the work of transaction after last commit, which step is used?
+[2M | Remember | 2 (Average)] Define the concept of a transaction in a database.
+[2M | Understand | 2 (Average)] What are the advantages of serial execution of transactions over concurrent execution?
+[2M | Remember | 2 (Average)] List the types of locks used in lock-based concurrency control protocols.
+[2M | Understand | 2 (Average)] What is the significance of the “Begin” and “Commit” operations in transaction management?
+[2M | Understand | 2 (Average)] What is the difference between the “active” and “partially committed” states in a transaction?
+[2M | Understand | 1] What is the significance of the “Committed State” in transaction management?
+[5M | Understand | 1 (Easy)] Why is Concurrency control needed??
+[5M | Understand | 2 (Average)] Explain conflict serializibility.
+[5M | Understand | 2 (Average)] What is log-based recovery?
+[5M | Understand | 2 (Average)] Explain View serializibility.
+[5M | Understand | 2 (Average)] Explain the Atomicity requirement of a transaction.
+[5M | Understand | 2 (Average)] Explain the ACID properties of a transaction in a DBMS.
+[5M | Analyze | 2 (Average)] Differentiate between serial and concurrent executions in database transactions.
+[5M | Understand | 2 (Average)] Describe the states a transaction goes through during its lifecycle.
+[5M | Understand | 2 (Average)] What is the role of a checkpoint in transaction recovery?
+[5M | Analyze | 2 (Average)] Compare conflict serializability and view serializability.
+[5M | Understand | 2 (Average)] Discuss the importance of isolation in the ACID properties with examples.
+[5M | Remember | 2 (Average)] Define the concept of transaction states and explain each state with an example.
+[5M | Understand | 2 (Average)] Explain how the Write-Ahead Logging (WAL) protocol ensures recovery in database systems.
+[5M | Analyze | 2 (Average)] What are the key benefits and drawbacks of using concurrent execution in a DBMS?
+[5M | Understand | 2 (Average)] Explain the concept of two-phase locking (2PL) and its significance in concurrency control.
+[5M | Understand | 2 (Average)] What are the types of failures in a DBMS, and how does each impact transaction management?
+[5M | Remember | 2 (Average)] List and explain the different types of locks used in lock-based protocols.
+[5M | Understand | 2 (Average)] Define and discuss the concept of serializability in transaction scheduling.
+[5M | Understand | 2 (Average)] How does the database ensure durability in the event of a system crash, based on the ACID properties?
+[5M | Understand | 2 (Average)] What is the role of transaction logs in database recovery?
+[5M | Understand | 2 (Average)] Explain the concept of “Undo/Redo” log and its role in database recovery.
+[5M | Analyze | 2] Compare and contrast conflict serializability with view serializability in transaction scheduling.
+[5M | Understand | 2] What is the difference between system failure and transaction failure in a database system?
+[5M | Understand | 2] What is meant by “log-based recovery”? Discuss its advantages and disadvantages.
+[5M | Understand | 2] Explain the concept of conflict serializability and how it ensures consistency in concurrent transactions.
+[5M | Understand | 3] Describe how the ACID property of Isolation is ensured in concurrent transaction processing.
+[5M | Understand | 2] Explain the process of database recovery using checkpoints.
+[5M | Understand | 2] Discuss the importance of functional dependencies in relational database design.
+[5M | Understand | 2] Explain the concept of “Write-Ahead Logging (WAL)” with an example.
+[5M | Understand | 3] Describe how two-phase locking avoids deadlock situations in a database system.
+[5M | Understand | 2] Explain the role of the "Aborted State" in transaction management and its impact on recovery.
+[5M | Understand | 3] Describe the mechanism of conflict resolution in concurrency control.
+[5M | Understand | 2] Discuss the importance of the “Durability” property of ACID in a DBMS.
+[5M | Understand | 2] What is meant by the term "transaction schedule"? How does it relate to serializability?
+[5M | Understand | 3] How do timestamp-based protocols handle concurrency in DBMS?
+[5M | Understand | 2 (Average)] Discuss the importance of "checkpointing" in the recovery process of a DBMS.
+[5M | Analyze | 1 (Easy)] What is the difference between "shadow paging" and "log-based recovery"?
+[5M | Understand | 1 (Easy)] What are the consequences of not handling concurrency control properly in a DBMS?
+[5M | Remember | 1 (Easy)] List the different states a transaction can be in, and describe the transition process.
+[5M | Understand | 2 (Average)] Explain the concept of "conflict serializability" in transaction scheduling.
+[5M | Understand | 1 (Easy)] What is the function of a "log buffer" in log-based recovery?
+[5M | Understand | 2 (Average)] Discuss how two-phase locking (2PL) ensures that transactions are serializable.
+[5M | Understand | 1 (Easy)] What is the role of the "Aborted State" in the ACID properties, and how does recovery work?
+[5M | Understand | 2 (Average)] Explain the concept of "deadlock recovery" in database systems.
+[5M | Understand | 2 (Average)] How do timestamp-based protocols help in maintaining serializability?
+[5M | Understand | 1 (Easy)] Explain how the "Active State" of a transaction is defined and when it changes.
+[5M | Understand | 2 (Average)] What are the steps involved in ensuring isolation for transactions in a concurrent system?
+[5M | Analyze | 2 (Average)] Discuss the implications of using serial execution versus concurrent execution in transaction management.
+[5M | Apply | 3 (Difficult)] How can conflict serializability be verified in a transaction schedule?
+[5M | Understand | 2 (Average)] Explain the concept of functional dependencies and their importance in database design.
+[5M | Understand | 1 (Easy)] What is the significance of the "Committed State" in transaction management?
+[5M | Understand | 2 (Average)] Explain how deadlock prevention mechanisms are implemented in DBMS.
+[5M | Understand | 2 (Average)] Define the concept of "conflict" in conflict serializability, and explain how to detect it in a schedule.
+[5M | Understand | 2 (Average)] How does the "Two-Phase Locking" (2PL) protocol prevent conflicts during transaction execution?
+[5M | Analyze | 1 (Easy)] What are the key differences between "write-ahead logging" and "shadow paging"?
+[5M | Understand | 2 (Average)] Discuss how media failure impacts DBMS and describe the recovery process using log-based recovery.
+[5M | Understand | 1 (Easy)] What is the role of "commit" in a transaction's lifecycle, and how does it affect database consistency?
+[5M | Analyze | 2 (Average)] Compare the advantages and disadvantages of serial execution and concurrent execution in database transactions.
+[5M | Understand | None] Explain the importance of the "active state" in a transaction's lifecycle.
+[5M | Understand | None] Discuss the role of the "Aborted State" in transaction recovery, and explain how to handle it.
+[5M | Analyze | None] What is the difference between conflict and view serializability, and how do they affect transaction schedules?
+[5M | Understand | None] Explain the purpose of the "undo/redo log" in log-based recovery and its role in ensuring database durability.
+[5M | Understand | None] How does the "checkpoint" mechanism in DBMS contribute to efficient transaction recovery?
+[5M | Understand | None] What are the different types of locks in DBMS, and how do they contribute to concurrency control?
+[5M | Understand | None] Describe the "partially committed" state in transaction management and its impact on transaction recovery.
+[5M | Understand | None] How can you ensure that a DBMS is resilient to system failure by using transaction logs?
+[5M | Understand | None] Discuss the role of "read and write operations" in transaction management and their impact on consistency.
+[5M | Understand | None] What is the significance of the "Consistency" property in the ACID model, and how does it affect transactions?
+[5M | Understand | None] What is the role of "isolation" in database transaction management, and how does it ensure correct execution?
+[5M | Understand | None] Discuss the process of "deadlock recovery" and how it is handled in modern DBMS.
+[5M | Understand | None] Describe how to handle failure recovery using shadow paging in DBMS.
+[5M | Understand | None] Explain the process of "log-based recovery" and its importance in maintaining data integrity in case of system failure.
+[5M | Understand | None] What are the primary advantages of using concurrency control protocols in a DBMS?
+[5M | Understand | None] How does a DBMS handle "system failure" and ensure that transactions are recovered correctly?
+[5M | Understand | None] Explain the concept of "failure classification" in DBMS and its role in the recovery process.
+[5M | Understand | None] Explain the concept of "log checkpointing" in DBMS and its role in enhancing recovery efficiency.
+[5M | Understand | None] How does "two-phase locking" (2PL) help prevent deadlock in concurrent transaction management?
+[5M | Analyze | None] Describe the difference between "atomicity" and "durability" in the ACID properties of transactions.
+[5M | Understand | None] Explain the process of "deadlock detection" and how it can be managed in a DBMS.
+[5M | Understand | None] Explain the role of "checkpointing" in a DBMS's recovery process and how it minimizes the cost of recovery.
+[5M | Understand | None] How does the "Durability" property of the ACID model ensure data integrity after a system crash?
+[5M | Understand | None] Discuss the challenges faced during concurrent executions of transactions and how conflict serializability resolves them.
+[5M | Understand | None] What is "view serializability" and how does it differ from conflict serializability?
+[5M | Understand | None] Discuss how the "active" and "partially committed" states of a transaction influence its execution and recovery.
+[5M | Understand | None] How does "timestamp-based concurrency control" ensure serializability in a DBMS?
+[5M | Understand | None] Explain the importance of the "begin" operation in a transaction's lifecycle in DBMS.
+[5M | Understand | None] Discuss how system failure impacts the state of transactions and how DBMS ensures consistency after recovery.
+[5M | Understand | None] Define the "aborted state" of a transaction and explain how a DBMS recovers from this state.
+[5M | Understand | None] What is the significance of "serializability" in the context of database transaction management?
+[5M | Understand | None] How can a DBMS ensure consistency and integrity when concurrent transactions are executed?
+[5M | Understand | None] Describe the impact of "isolation" in a DBMS and how it affects concurrent transactions.
+[5M | Understand | None] Explain how "conflict serializability" can be used to detect errors in concurrent transaction execution.
+[5M | Understand | None] Explain the concept of "undo/redo logs" and their role in transaction recovery in DBMS.
+[5M | Understand | None] Define "media failure" and explain how it can be handled in DBMS recovery techniques.
+[5M | Understand | None] How does a "timestamp-based protocol" help in managing concurrency in DBMS?
+[5M | Understand | None] Discuss the role of "recovery from aborted transactions" in ensuring database consistency.
+[5M | Understand | None] How does the concept of "two-phase locking" (2PL) impact transaction performance and deadlock prevention?
+[5M | Understand | None] Describe the process of "shadow paging" and how it provides a mechanism for transaction recovery.
+[5M | Analyze | None] Discuss the difference between "system failure" and "transaction failure" in terms of recovery strategies.
+[5M | Understand | None] What are the primary benefits of using "serial execution" over "concurrent execution" in database transactions?
+[5M | Understand | None] Explain how "log-based recovery" works in a DBMS when there is a system crash.
+[5M | Understand | None] Discuss the concept of "durability" in the ACID properties and its importance in transaction management.
+[5M | Understand | None] How does the use of "timestamps" in concurrency control protocols help in avoiding inconsistencies in the database?
+[5M | Understand | None] Define and explain the term "failure classification" in the context of database recovery.
+[5M | Understand | None] Discuss the role of "checkpointing" in recovery from failures in DBMS and its impact on performance.
+[5M | Understand | None] Describe the concept of "media failure" in a database system and explain how to handle it with log-based recovery.
+[5M | Analyze | None] How does "view serializability" relate to conflict serializability in transaction schedules?
+[5M | Understand | None] Discuss the importance of "ACID properties" in maintaining the integrity of database transactions.
+[5M | Understand | None] Explain how the "active state" and "failed state" of a transaction influence the recovery mechanism.
+[5M | Understand | None] What is "conflict serializability," and how does it ensure the consistency of concurrent transactions?
+[5M | Understand | None] Explain the concept of "transaction rollback" and its significance in transaction recovery.
+[5M | Understand | None] Define and explain the concept of "transaction states" in DBMS.
+[5M | Understand | None] Discuss the role of "atomicity" in ensuring reliable transaction processing.
+[5M | Understand | None] Explain how "serial execution" can lead to better performance in some database scenarios.
+[5M | Understand | None] Describe the mechanism of "deadlock prevention" in a DBMS using locking protocols.
+[5M | Understand | None] Discuss the importance of "consistency" in the ACID properties for ensuring correct transaction execution.
+[5M | Understand | None] Define "conflict equivalence" and explain its significance in transaction schedules.
+[5M | Understand | None] Discuss how "checkpoints" enhance recovery in a database system.
+[5M | Understand | None] Describe how "recovery using shadow paging" can prevent data corruption during a system crash.
+[5M | Analyze | None] Discuss the differences between "transaction failure" and "system failure" and their impact on recovery methods.
+[5M | Understand | None] Define "write-ahead logging" and explain its significance in transaction recovery.
+[5M | Understand | None] Discuss the importance of "isolation" in ACID properties for maintaining concurrent transactions.
+[5M | Understand | None] Explain the concept of "transaction management" and how it ensures consistency in a DBMS.
+[5M | Understand | None] Describe how "conflict serializability" helps ensure transaction schedules maintain database integrity.
+[5M | Understand | None] Define "deadlock detection" and explain how it can be applied to manage concurrency in DBMS.
+[5M | Understand | None] Explain how "timestamp-based protocols" are used to enforce serializability in a database system.
+[5M | Understand | None] Discuss the importance of "checkpointing" in ensuring efficient recovery in large databases.
+[5M | Understand | None] Define "log-based recovery" and explain its components and advantages over other recovery techniques.
+[5M | Analyze | None] Discuss the difference between "undo" and "redo" operations in the context of transaction recovery.
+[5M | Understand | None] Explain the role of "transaction lifespan" in managing the flow of transactions within a DBMS.
+[5M | Understand | None] Describe how "shadow paging" can be used as an alternative to log-based recovery.
+[5M | Analyze | None] Discuss the trade-offs between using "lock-based" and "timestamp-based" protocols in concurrency control.
+[5M | Understand | None] Define "conflict serializability" and explain how it can be checked in a transaction schedule.
+[5M | Understand | None] Describe how "isolation" in transaction management ensures that transactions are processed independently.
+[5M | Understand | None] Discuss how "serializability" in a DBMS prevents issues related to concurrent transactions.
+[5M | Understand | None] Define the concept of "failure classification" and discuss its significance in transaction recovery.
+[5M | Analyze | None] Explain the differences between "serial execution" and "concurrent execution" in terms of transaction consistency.
+[5M | Understand | None] Define the term "transaction states" and explain the different states that a transaction can undergo.
+[5M | Understand | None] Discuss how "timestamp-based protocols" handle concurrent transactions and ensure consistency.
+[5M | Understand | None] Discuss the impact of "system failures" on transactions and explain the recovery techniques used to address them.
+[5M | Understand | None] Define "deadlock prevention" and explain its role in maintaining system performance in DBMS.
+[5M | Analyze | None] Explain the differences between "transaction failure" and "system failure" in the context of database recovery.
+[5M | Understand | None] Define "conflict equivalence" and explain its importance in determining serializability in DBMS.
+[5M | Understand | None] Discuss the concept of "view serializability" and how it differs from conflict serializability.
+[5M | Understand | None] Explain how "write-ahead logging" ensures durability in transaction management.
+[5M | Understand | None] Discuss the relationship between "atomicity" and "consistency" in the ACID properties of transactions.
+[5M | Understand | None] Define "transaction management" and explain the importance of transaction logs for ensuring recovery in case of failures.
+[5M | Understand | None] Explain how "concurrent executions" impact the performance and reliability of a DBMS.
+[5M | Understand | None] Discuss the importance of "transaction rollback" in maintaining database consistency after a failure.
+[5M | Understand | None] Define "shadow paging" and describe its advantages and disadvantages compared to log-based recovery methods.
+[5M | Understand | None] Explain the concept of "transaction scheduling" and how it relates to serializability in a DBMS.
+[5M | Understand | None] Define "concurrent execution" and discuss its impact on transaction integrity in a multi-user environment.
+[10M | Understand | None] State the ACID properties of a transaction.
+[10M | Understand | None] Explain the concept of a serial schedule.
+[10M | Understand | None] Explain the different states of a transaction with the help of a diagram.
+[10M | Understand | None] Explain the concept of Recoverability.
+[10M | Understand | None] Write a detailed note on Shadow-paging.
+[10M | Apply | 2 (Average)] Solve a problem where a transaction fails after some operations are performed, but it needs to be rolled back. Illustrate the recovery process using log-based recovery.
+[10M | Apply | 2 (Average)] Solve an example of deadlock detection in lock-based concurrency control.
+[10M | Apply | 2 (Average)] How would you handle a deadlock situation in a database using deadlock prevention methods?
+[10M | Analyze | 2 (Average)] Describe how shadow paging works as a recovery technique and compare it to log-based recovery.
+[10M | Apply | 2 (Average)] Solve a problem involving timestamp-based concurrency control where two transactions have conflicting timestamps.
+[10M | Apply | 2] Describe a situation where a transaction needs to be aborted. What is the process of recovery?
+[10M | Apply | 3] Discuss how to handle deadlock using the timestamp-based concurrency control protocol.
+[10M | Apply | 3] Solve a case where a database transaction is aborted, and recovery is done using shadow paging.
+[10M | Apply | 3] Solve a numerical problem involving transaction recovery after a media failure.
+[10M | Apply | 3] Solve an example where a DBMS needs to handle system failure and recover transactions using log-based recovery.
+[10M | Apply | 3 (Difficult)] Solve a problem where deadlock detection is used in a DBMS with lock-based protocols.
+[10M | Apply | 2 (Average)] Describe the process of how deadlock is detected and resolved in DBMS using timestamp-based protocols.
+[10M | Apply | 3 (Difficult)] Solve an example of a recovery scenario where system failure occurs and transactions must be rolled back using log-based recovery.
+[10M | Apply | 3 (Difficult)] Solve a numerical example involving recovery from media failure using the checkpoint mechanism.
+[10M | Apply | 3 (Difficult)] Solve an example where a transaction must be rolled back after a failure using undo/redo log.
+[10M | Apply | 3 (Difficult)] Solve an example involving transaction failure, and explain how system recovery can be performed using shadow paging.
+[10M | Apply | 3 (Difficult)] Solve a problem in which two transactions must be executed concurrently and ensure serializability through conflict serializability.
+[10M | Apply | None] Solve a problem where a transaction enters the "partially committed" state and explain how recovery takes place.
+[10M | Apply | None] Solve an example using timestamp-based concurrency control protocols to manage transactions.
+[10M | Apply | None] Solve a problem where you need to handle deadlock detection and recovery in a DBMS.
+[10M | Apply | None] Solve a problem where transaction recovery is done after a system crash using log-based methods.
+[10M | Apply | None] Solve a problem where multiple transactions must be scheduled concurrently while maintaining serializability.
+[10M | Apply | None] Solve a case where transaction recovery after system crash is performed using two-phase logging.
+[10M | Apply | None] Solve an example where timestamp-based protocols are used to resolve conflicts in concurrent transactions.
+[10M | Apply | None] Solve an example where conflict serializability is checked in a transaction schedule.
+[10M | Apply | None] Solve a problem where a transaction has to be rolled back using undo logs in a DBMS after a failure.
+[10M | Apply | None] Solve a problem where system failure occurs and the recovery is done using the shadow paging technique.
+[10M | Apply | None] Solve an example where a database transaction must be recovered from a failure using a write-ahead log.
+[10M | Apply | None] Solve a problem where concurrency control is applied using lock-based protocols in a DBMS.
+[10M | Apply | None] Solve a problem where recovery from media failure is performed using log-based recovery techniques.
+[10M | Apply | None] Solve a case where transaction scheduling is required, and the transactions must be serialized for consistency.
+[10M | Apply | None] Solve an example where transactions are ordered based on timestamps to ensure serializability.
+[10M | Apply | None] Solve a problem where you must use "write-ahead logging" to recover a database after a system crash.
+[10M | Apply | None] Solve an example where transactions must be serialized based on conflict serializability.
+[10M | Apply | None] Solve a problem in which you need to identify and resolve deadlock using a deadlock detection protocol.
+[10M | Apply | None] Solve a problem where transactions fail and need to be recovered using the undo/redo log mechanism.
+[10M | Apply | None] Solve a problem where concurrency control is managed using both locks and timestamps in a DBMS.
+[10M | Apply | None] Solve a problem where recovery is done using shadow paging and the database state is restored after a failure.
+[10M | Apply | None] Solve a problem where you need to handle transactions that move between "partially committed" and "aborted" states.
+[10M | Apply | None] Solve a problem where you need to identify the conflict serializability of a transaction schedule.
+[10M | Apply | None] Solve a scenario where a database uses "lock-based protocols" and you need to detect deadlocks.
+[10M | Apply | None] Solve an example where you need to manage "undo/redo logs" to recover from a system crash.
+[10M | Apply | None] Solve a numerical problem where you need to recover a database using "log-based recovery" after a failure occurs.
+[10M | Apply | None] Solve a problem where a set of transactions must be scheduled to meet the "serializability" criterion.
+[10M | Apply | None] Solve an example where "deadlock recovery" is required after multiple transactions have been detected in a DBMS.
+[10M | Apply | None] Solve a problem where database transactions are scheduled using the "two-phase locking protocol" and deadlock is prevented.
+[10M | Apply | None] Solve a numerical problem where the database must recover after a "system failure" using log-based recovery techniques.
+[10M | Apply | None] Solve a problem where you need to apply the "write-ahead logging" protocol for transaction recovery.
+[10M | Apply | None] Solve a problem where a transaction is aborted due to a failure, and recovery is performed using "undo/redo" logging.
+[10M | Apply | None] Solve a problem where transactions are scheduled to achieve "view serializability."
+[10M | Apply | None] Solve a problem that involves "log-based recovery" for a transaction that needs to be rolled back.
+[10M | Apply | None] Solve a scenario where "checkpoints" are used to facilitate recovery from a database crash.
+[10M | Apply | None] Solve a problem where transactions are executed in a "two-phase locking protocol" to prevent conflicts.
+[10M | Apply | None] Solve a problem where "shadow paging" is used to recover from a failure after a transaction aborts.
+[10M | Apply | None] Solve a problem where you need to manage "deadlock detection" in a DBMS using a specified algorithm.
+[10M | Apply | None] Solve a problem that requires implementing a "lock-based protocol" to avoid conflicts between transactions.
+[10M | Apply | None] Solve a problem involving "timestamp-based protocols" and how they enforce serializability in transaction management.

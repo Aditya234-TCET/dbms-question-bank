@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBMS Question Bank · PCC-ETC602</title>
+  <meta name="description" content="Interactive DBMS Question Bank for PCC-ETC602 — browse, filter and generate answers for 900+ questions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & tokens ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f1117;
+      --surface:   #1a1d27;
+      --surface2:  #22263a;
+      --border:    #2e3249;
+      --accent:    #6c8cf4;
+      --accent2:   #a78bfa;
+      --text:      #e8eaf6;
+      --muted:     #8b90b0;
+      --card-bg:   #191c2a;
+      --pill-bg:   #1e2135;
+      --pill-active: #6c8cf4;
+      --radius:    12px;
+      --radius-sm: 8px;
+      --shadow:    0 4px 24px rgba(0,0,0,.45);
+    }
+
+    html { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; }
+    body { min-height: 100vh; padding: 0 0 60px; }
+
+    /* ── Gradient top bar ───────────────────────────────────── */
+    .topbar {
+      height: 4px;
+      background: linear-gradient(90deg, #6c8cf4, #a78bfa, #f472b6);
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── Header ─────────────────────────────────────────────── */
+    .header { padding: 36px 0 28px; }
+    .header h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -.5px; }
+    .header p  { color: var(--muted); margin-top: 6px; font-size: .9rem; }
+
+    /* ── Stat cards ─────────────────────────────────────────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    @media (max-width: 640px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      transition: transform .2s, border-color .2s;
+    }
+    .stat-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .stat-card .num  { font-size: 2rem; font-weight: 800; }
+    .stat-card .lbl  { color: var(--muted); font-size: .82rem; margin-top: 4px; }
+
+    /* ── Filter pills ───────────────────────────────────────── */
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .pill {
+      background: var(--pill-bg);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px 20px;
+      font-size: .875rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--muted);
+      transition: background .18s, color .18s, border-color .18s, transform .15s;
+    }
+    .pill:hover  { border-color: var(--accent); color: var(--text); transform: translateY(-1px); }
+    .pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    /* ── Search / CO row ────────────────────────────────────── */
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    select, input[type="text"] {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      padding: 10px 16px;
+      font-family: inherit;
+      font-size: .9rem;
+      outline: none;
+      transition: border-color .18s, box-shadow .18s;
+    }
+    select:focus, input[type="text"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108,140,244,.15);
+    }
+    select { cursor: pointer; min-width: 130px; }
+    #searchInput { flex: 1; min-width: 200px; }
+
+    .btn-gen {
+      background: var(--text);
+      color: var(--bg);
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 10px 20px;
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity .18s, transform .15s;
+    }
+    .btn-gen:hover { opacity: .85; transform: translateY(-1px); }
+    .btn-gen:active { transform: translateY(0); }
+
+    /* ── Results meta ───────────────────────────────────────── */
+    .results-meta {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .results-meta span { color: var(--text); font-weight: 600; }
+
+    /* ── Question list ──────────────────────────────────────── */
+    #questionList { display: flex; flex-direction: column; gap: 10px; }
+
+    .q-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: 14px;
+      transition: border-color .18s, transform .18s;
+      animation: fadeSlide .25s ease both;
+    }
+    .q-card:hover { border-color: var(--accent); transform: translateX(3px); }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-num {
+      font-size: .75rem;
+      color: var(--muted);
+      min-width: 28px;
+      padding-top: 2px;
+    }
+    .q-main { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+    .q-text { font-size: .925rem; line-height: 1.55; }
+    
+    .q-answer { font-size: .9rem; color: #d0d2e0; white-space: pre-wrap; display: none; padding: 12px 14px; background: rgba(0,0,0,0.25); border-radius: var(--radius-sm); border-left: 2px solid var(--accent); line-height: 1.6; font-family: inherit; }
+    .q-answer.show { display: block; }
+
+    .q-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; flex-wrap: wrap; gap: 10px; }
+    .btn-answer { background: var(--surface2); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px; font-size: .75rem; font-weight: 500; cursor: pointer; transition: all .2s; display: flex; align-items: center; gap: 6px; }
+    .btn-answer:hover:not(:disabled) { border-color: var(--accent); background: var(--surface); }
+    .btn-answer:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .q-badges { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .badge {
+      font-size: .7rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      letter-spacing: .4px;
+    }
+    .badge-marks { background: rgba(108,140,244,.18); color: #8aaaf7; }
+    .badge-co    { background: rgba(167,139,250,.18); color: #b39dfa; }
+    .badge-rbt   { background: rgba(52,211,153,.15); color: #6ee7b7; }
+    .badge-diff  { background: rgba(251,191,36,.12); color: #fbbf24; }
+
+    /* ── Pagination ─────────────────────────────────────────── */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .page-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      color: var(--text);
+      padding: 7px 14px;
+      font-size: .85rem;
+      cursor: pointer;
+      transition: background .18s, border-color .18s;
+    }
+    .page-btn:hover  { border-color: var(--accent); background: var(--surface2); }
+    .page-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+    .page-btn:disabled { opacity: .35; cursor: default; }
+
+    /* ── Loading skeleton ───────────────────────────────────── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--surface) 25%, var(--surface2) 50%, var(--surface) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: var(--radius-sm);
+      height: 68px;
+    }
+    @keyframes shimmer { to { background-position: -200% 0; } }
+
+    /* ── Empty state ────────────────────────────────────────── */
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .empty svg { opacity: .25; margin-bottom: 14px; }
+    .empty p   { font-size: 1rem; }
+
+    /* ── Toast ──────────────────────────────────────────────── */
+    #toast {
+      position: fixed; bottom: 24px; right: 24px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 20px;
+      font-size: .875rem;
+      color: var(--text);
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .25s, transform .25s;
+      pointer-events: none;
+      z-index: 999;
+    }
+    #toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ── Mobile Responsiveness ──────────────────────────────── */
+    @media (max-width: 640px) {
+      .container { padding: 0 16px; }
+      .header { padding: 24px 0 20px; }
+      .header h1 { font-size: 1.5rem; }
+      
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .stat-card { padding: 16px; }
+      .stat-card .num { font-size: 1.6rem; }
+      
+      .controls { flex-direction: column; gap: 10px; }
+      .controls select, .controls input, .controls .btn-gen { width: 100%; min-width: unset; }
+      
+      .q-card { grid-template-columns: 1fr; gap: 10px; padding: 16px; }
+      .q-num { display: inline-block; background: var(--surface2); padding: 2px 8px; border-radius: 4px; color: var(--accent); font-weight: 600; width: fit-content; margin-bottom: 4px; }
+      
+      .q-footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-answer { width: 100%; justify-content: center; padding: 8px; font-size: 0.85rem; }
+      .q-badges { width: 100%; justify-content: flex-start; }
+      
+      #toast { left: 16px; right: 16px; bottom: 16px; text-align: center; }
+    }
+    @media (max-width: 380px) {
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>DBMS Question Bank</h1>
+      <p id="headerMeta">Loading… · Database Management System · PCC-ETC602</p>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num" id="stat2">—</div><div class="lbl">2-mark questions</div></div>
+      <div class="stat-card"><div class="num" id="stat5">—</div><div class="lbl">5-mark questions</div></div>
+      <div class="stat-card"><div class="num" id="stat10">—</div><div class="lbl">10-mark questions</div></div>
+      <div class="stat-card"><div class="num" id="statCO">—</div><div class="lbl">Course outcomes</div></div>
+    </div>
+
+    <!-- Mark filters -->
+    <div class="filter-row" id="markFilters">
+      <button class="pill active" data-marks="all">All marks</button>
+      <button class="pill" data-marks="2">2 marks</button>
+      <button class="pill" data-marks="5">5 marks</button>
+      <button class="pill" data-marks="10">10 marks</button>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <select id="coSelect"><option value="all">All COs</option></select>
+      <input id="searchInput" type="text" placeholder="Search questions…" autocomplete="off" />
+      <button class="btn-gen" id="btnGen">Generate answers for page ↓</button>
+    </div>
+
+    <!-- Results count -->
+    <div class="results-meta" id="resultsMeta"></div>
+
+    <!-- List -->
+    <div id="questionList"></div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script>
+    // ── State ────────────────────────────────────────────────
+    let state = { marks: 'all', co: 'all', search: '', page: 1 };
+
+    // ── Fetch helpers ────────────────────────────────────────
+    async function fetchStats() {
+      const r = await fetch('/api/stats');
+      return r.json();
+    }
+    async function fetchCOs() {
+      const r = await fetch('/api/cos');
+      return r.json();
+    }
+    async function fetchQuestions() {
+      const p = new URLSearchParams({
+        marks:  state.marks,
+        co:     state.co,
+        search: state.search,
+        page:   state.page,
+      });
+      const r = await fetch('/api/questions?' + p);
+      return r.json();
+    }
+
+    // ── Init ─────────────────────────────────────────────────
+    async function init() {
+      const [stats, cos] = await Promise.all([fetchStats(), fetchCOs()]);
+
+      // Header meta
+      document.getElementById('headerMeta').textContent =
+        `${stats.total} questions · Database Management System · PCC-ETC602`;
+
+      // Stat cards
+      document.getElementById('stat2').textContent  = stats.two;
+      document.getElementById('stat5').textContent  = stats.five;
+      document.getElementById('stat10').textContent = stats.ten;
+      document.getElementById('statCO').textContent = stats.cos;
+
+      // CO dropdown
+      const sel = document.getElementById('coSelect');
+      cos.forEach(co => {
+        const opt = document.createElement('option');
+        opt.value = co; opt.textContent = co;
+        sel.appendChild(opt);
+      });
+
+      await renderQuestions();
+    }
+
+    // ── Render ───────────────────────────────────────────────
+    function showSkeletons() {
+      const list = document.getElementById('questionList');
+      list.innerHTML = Array(8).fill('<div class="skeleton"></div>').join('');
+    }
+
+    async function renderQuestions() {
+      showSkeletons();
+      document.getElementById('resultsMeta').textContent = '';
+      document.getElementById('pagination').innerHTML = '';
+
+      const data = await fetchQuestions();
+
+      document.getElementById('resultsMeta').innerHTML =
+        `Showing <span>${data.results.length}</span> of <span>${data.total}</span> questions`;
+
+      const list = document.getElementById('questionList');
+      if (!data.results.length) {
+        list.innerHTML = `
+          <div class="empty">
+            <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p>No questions found. Try adjusting your filters.</p>
+          </div>`;
+        return;
+      }
+
+      const start = (data.page - 1) * 20;
+      list.innerHTML = data.results.map((q, i) => `
+        <div class="q-card" style="animation-delay:${i * 18}ms">
+          <div class="q-num">${start + i + 1}</div>
+          <div class="q-main">
+            <div class="q-text" data-q="${escHtml(q.question)}" data-marks="${q.marks}">${escHtml(q.question)}</div>
+            <div class="q-answer" id="ans-${i}"></div>
+            <div class="q-footer">
+              <button class="btn-answer" id="btn-ans-${i}" onclick="generateAnswer(${i})">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Generate Answer
+              </button>
+              <div class="q-badges">
+                <span class="badge badge-marks">${q.marks}M</span>
+                ${q.co ? `<span class="badge badge-co">${escHtml(q.co)}</span>` : ''}
+                ${q.rbt ? `<span class="badge badge-rbt">${escHtml(q.rbt)}</span>` : ''}
+                ${q.difficulty ? `<span class="badge badge-diff">${escHtml(q.difficulty)}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>`).join('');
+
+      renderPagination(data.page, data.pages);
+    }
+
+    function renderPagination(current, total) {
+      const el = document.getElementById('pagination');
+      if (total <= 1) return;
+
+      let html = `<button class="page-btn" ${current===1?'disabled':''} onclick="goPage(${current-1})">← Prev</button>`;
+
+      const range = pageRange(current, total);
+      range.forEach(p => {
+        if (p === '…') {
+          html += `<span style="color:var(--muted);padding:0 4px">…</span>`;
+        } else {
+          html += `<button class="page-btn ${p===current?'active':''}" onclick="goPage(${p})">${p}</button>`;
+        }
+      });
+
+      html += `<button class="page-btn" ${current===total?'disabled':''} onclick="goPage(${current+1})">Next →</button>`;
+      el.innerHTML = html;
+    }
+
+    function pageRange(cur, total) {
+      const delta = 2, pages = [];
+      for (let i = 1; i <= total; i++) {
+        if (i === 1 || i === total || (i >= cur - delta && i <= cur + delta)) pages.push(i);
+        else if (pages[pages.length - 1] !== '…') pages.push('…');
+      }
+      return pages;
+    }
+
+    function goPage(p) {
+      state.page = p;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      renderQuestions();
+    }
+
+    // ── Event listeners ──────────────────────────────────────
+    document.getElementById('markFilters').addEventListener('click', e => {
+      const btn = e.target.closest('.pill');
+      if (!btn) return;
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      state.marks = btn.dataset.marks;
+      state.page  = 1;
+      renderQuestions();
+    });
+
+    document.getElementById('coSelect').addEventListener('change', e => {
+      state.co   = e.target.value;
+      state.page = 1;
+      renderQuestions();
+    });
+
+    let searchTimer;
+    document.getElementById('searchInput').addEventListener('input', e => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        state.search = e.target.value;
+        state.page   = 1;
+        renderQuestions();
+      }, 320);
+    });
+
+    async function generateAnswer(index) {
+      const el = document.querySelectorAll('.q-text')[index];
+      const ansDiv = document.getElementById(`ans-${index}`);
+      const btn = document.getElementById(`btn-ans-${index}`);
+      
+      btn.disabled = true;
+      btn.innerHTML = `<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Generating...`;
+      ansDiv.classList.add('show');
+      ansDiv.textContent = 'Thinking...';
+      
+      try {
+        const res = await fetch(`/api/answer?q=${encodeURIComponent(el.dataset.q)}&marks=${encodeURIComponent(el.dataset.marks)}`);
+        if (!res.ok) throw new Error('API Error');
+        const reader = res.body.getReader();
+        const decoder = new TextDecoder('utf-8');
+        ansDiv.textContent = '';
+        while (true) {
+          const {done, value} = await reader.read();
+          if (done) break;
+          ansDiv.textContent += decoder.decode(value, {stream: true});
+        }
+      } catch (e) {
+        ansDiv.textContent = 'Error: ' + e.message;
+      } finally {
+        btn.innerHTML = `<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Regenerate`;
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById('btnGen').addEventListener('click', async () => {
+      const items = document.querySelectorAll('.q-text');
+      if (!items.length) { showToast('No questions on this page.'); return; }
+      
+      showToast('Generating answers sequentially...', 2000);
+      for (let i = 0; i < items.length; i++) {
+        await generateAnswer(i);
+        // Small delay between requests to avoid rate limits
+        await new Promise(r => setTimeout(r, 500));
+      }
+    });
+
+    // ── Toast ─────────────────────────────────────────────────
+    function showToast(msg, dur = 3000) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), dur);
+    }
+
+    // ── Util ──────────────────────────────────────────────────
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    init();
+  </script>
+</body>
+</html>
