@@ -2,8 +2,12 @@ from flask import Flask, jsonify, render_template, request, Response, stream_wit
 import openpyxl
 from collections import defaultdict
 import g4f
+import os
 
 app = Flask(__name__)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+EXCEL_PATH = os.path.join(BASE_DIR, 'final dbms.xlsx')
 
 # ── Free AI setup ───────────────────────────────────────────────────────────
 # We use g4f (gpt4free) to generate answers without needing any API keys.
@@ -11,7 +15,7 @@ app = Flask(__name__)
 
 # ── Load Excel data once at startup ─────────────────────────────────────────
 def load_questions():
-    wb = openpyxl.load_workbook(r'd:\DBMS QB\final dbms.xlsx')
+    wb = openpyxl.load_workbook(EXCEL_PATH)
     ws = wb['MAIN_SHEET']
     questions = []
     for i, row in enumerate(ws.iter_rows(values_only=True)):
